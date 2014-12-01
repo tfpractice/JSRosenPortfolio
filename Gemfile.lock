@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 01d2bd884a3b536ea3dac41202b4f23f69ed9cb6
+  revision: 1b2a3ca57d121ba0ec281a10ebd07a9d11bda873
   specs:
     rails_admin (0.6.5)
       builder (~> 3.1)
@@ -105,7 +105,7 @@ GEM
     ffi (1.9.6)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
-    haml (4.0.5)
+    haml (4.0.6)
       tilt
     hike (1.2.3)
     i18n (0.6.11)
@@ -115,7 +115,7 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    jquery-ui-rails (5.0.2)
+    jquery-ui-rails (5.0.3)
       railties (>= 3.2.16)
     json (1.8.1)
     kaminari (0.16.1)
@@ -223,6 +223,7 @@ DEPENDENCIES
   rails-admin-scaffold
   rails_12factor
   rails_admin!
+  rails_serve_static_assets
   sass-rails
   sdoc (~> 0.4.0)
   spring
