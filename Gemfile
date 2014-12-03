@@ -45,8 +45,7 @@ gem 'rake', '~> 10.4.2'
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'
 
-gem 'sprockets'
-
+gem 'sprockets', '2.11.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
