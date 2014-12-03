@@ -40,6 +40,7 @@ gem 'rails_12factor'
 gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'foreman', '~> 0.63.0'
+gem 'rake', '~> 10.4.2'
 
 gem 'rails_serve_static_assets'
 gem 'rails_stdout_logging'

@@ -230,6 +230,7 @@ DEPENDENCIES
   rails_admin!
   rails_serve_static_assets
   rails_stdout_logging
+  rake (~> 10.4.2)
   sass-rails
   sdoc (~> 0.4.0)
   spring
