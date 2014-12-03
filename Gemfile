@@ -36,7 +36,7 @@ gem 'compass-susy-plugin'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 ###heroku instruction
-gem 'rails_12factor'
+#gem 'rails_12factor'
 gem 'rails_12factor', group: :production
 gem 'unicorn'
 gem 'foreman', '~> 0.63.0'

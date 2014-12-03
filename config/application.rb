@@ -6,7 +6,12 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
+###
+#Rails.application.configure do
+ #     config.serve_static_assets = true
 
+#end
+###
 module JSRosen01
   class Application < Rails::Application
     config.assets.enabled = false
