@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :categories
+  end
+
+  namespace :admin do
+    resources :projects
+  end
+
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'samples#index'
