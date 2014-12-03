@@ -9,7 +9,7 @@ Bundler.require(*Rails.groups)
 
 module JSRosen01
   class Application < Rails::Application
-
+    config.assets.enabled = false
     config.serve_static_assets = true
 
     # Settings in config/environments/* take precedence over those specified here.
