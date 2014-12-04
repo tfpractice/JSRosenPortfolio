@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'portfolio/index'
+
+  get 'portfolio/show'
+
   namespace :admin do
     resources :categories
   end
@@ -9,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  root 'samples#index'
+  root 'portfolio#index'
   resources :samples
 
   # The priority is based upon order of creation: first created -> highest priority.
