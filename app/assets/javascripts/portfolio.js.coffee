@@ -2,8 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+ # $("#menu").scrollToFixed()
+  
   $("#fullpage").fullpage
-    
+    menu: "#menu"
     #Navigation
     ###
     menu: false
@@ -11,12 +13,14 @@ $(document).ready ->
       "firstSlide"
       "secondSlide"
     ]
-    navigation: false
+    ###
+    navigation: true
     navigationPosition: "right"
     navigationTooltips: [
       "firstSlide"
       "secondSlide"
     ]
+    ###
     ###
     slidesNavigation: true
     slidesNavPosition: "bottom"
@@ -33,7 +37,7 @@ $(document).ready ->
     loopHorizontal: true
     continuousVertical: false
     normalScrollElements: "#element1, .element2"
-    scrollOverflow: false
+    scrollOverflow: true
     touchSensitivity: 15
     normalScrollElementTouchThreshold: 5
     
@@ -45,11 +49,11 @@ $(document).ready ->
     verticalCentered: true
     resize: true
     sectionsColor: [
-      "#ccc"
-      "#fff"
+      "#ffffea"
+      "#ffffea"
     ]
-    paddingTop: "3em"
-    paddingBottom: "10px"
+    paddingTop: "none"
+    paddingBottom: "3em"
     fixedElements: "#header, .footer"
     responsive: 0
     
@@ -70,4 +74,4 @@ $(document).ready ->
 
     onSlideLeave: (anchorLink, index, slideIndex, direction) ->
 
-  return
+  

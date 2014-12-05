@@ -1,38 +1,40 @@
-<div id="fullpage">
-	<div class="section" id = "splash" data-anchor="slide1">
-
-		<h1>Splash/Home</h1>
-		<p>Find me in app/views/portfolio/index.html.erb</p>
-		Some section
+	<div class="section" id = "splash" >
+		<%= image_tag("site_bg_0.jpg")%>
+		<!-- <h1>Splash/Home</h1>
+		<p>Find me in app/views/portfolio/index.html.erb 		Some section
+</p> -->
 
 	</div>
 
-	<div class="section" id = "about" data-anchor="slide2">
+	<div class="section" id = "about" >
 		about
 
 
 	</div>
 	
 
-	<div class="section" id = "projects" data-anchor="slide3">
+	<div class="section" id = "projects">
 		
 
-		<div class="slide" > Category 1 
+		<div class="slide" data-anchor="slide1" > Category 1 
 
-<div>			HERE IS SOME CONTENT
-</div>
-
-		</div>
-		<div class="slide"> Category 2 
-
-<div>			HERE IS SOME CONTENT
-</div>
+					<p>HERE IS SOME CONTENT</p>
+		
 
 		</div>
+		<div class="slide" data-anchor="slide2"> Category 2 
 
-		<div class="slide"> Category 3 
+					<%= image_tag("site_bg_0.jpg")%>
+
+
+
+		</div>
+
+		<div class="slide"  data-anchor="slide3"> Category 3 
 
 			HERE IS SOME CONTENT
+								<%= image_tag("site_bg_0.jpg")%>
+
 
 
 		</div>
@@ -46,10 +48,9 @@
 	</div>
 
 
-	<div class="section" id ="Résumé/CV" data-anchor="slide4" >
+	<section class="section" id ="Résumé/CV" data-anchor="slide4" >
 		Résumé/CV
-	</div>
+	</section>
 
 
 
-</div>

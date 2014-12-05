@@ -2,7 +2,17 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-div{
+#fullpage{
+	.section, .fp-section{
+		padding: none;
 
-	background-color: #ff00ff;
+	background-color: #ffffea;
+}
+
+#splash{
+	img{ 
+		max-height: 90%;
+		max-width: 100%;
+	}
+}
 }
