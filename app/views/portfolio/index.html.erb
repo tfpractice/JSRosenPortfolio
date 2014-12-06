@@ -1,4 +1,4 @@
-	<div class="section" id = "splash" >
+	<div class="section" data-anchor="top" >
 		<%= image_tag("site_bg_0.jpg")%>
 		<!-- <h1>Splash/Home</h1>
 		<p>Find me in app/views/portfolio/index.html.erb 		Some section
@@ -6,25 +6,32 @@
 
 	</div>
 
-	<div class="section" id = "about" >
-		about
-
+	<div class="section" data-anchor="about" >
+<p>		about
+</p>
 
 	</div>
 	
 
-	<div class="section" id = "projects">
+	<div class="section" data-anchor="projects">
+		<ul class = "projectsList" id ="homeProjectList">
+			<% @projects.each do |project| %>
+			<li class = "menuItem"> <%=project.title%> </li>
+			<% end %>
+		</ul>
 		
-
+		<% @projects.each do |project| %>
 		<div class="slide" data-anchor="slide1" > Category 1 
 
 					<p>HERE IS SOME CONTENT</p>
 		
-
+					<%= render "projects" %>
 		</div>
+					<% end %>
+
 		<div class="slide" data-anchor="slide2"> Category 2 
 
-					<%= image_tag("site_bg_0.jpg")%>
+					<%= image_tag("logo_large_white.png")%>
 
 
 
@@ -33,22 +40,22 @@
 		<div class="slide"  data-anchor="slide3"> Category 3 
 
 			HERE IS SOME CONTENT
-								<%= image_tag("site_bg_0.jpg")%>
+								<%= image_tag("logo_large_brown.svg")%>
 
 
 
-		</div>
+		</div><!-- 
 
 		<div class="slide"> Category 4 
 
 			HERE IS SOME CONTENT
 
 
-		</div>
+		</div> -->
 	</div>
 
 
-	<section class="section" id ="Résumé/CV" data-anchor="slide4" >
+	<section class="section" id ="Résumé/CV" data-anchor="resume" >
 		Résumé/CV
 	</section>
 

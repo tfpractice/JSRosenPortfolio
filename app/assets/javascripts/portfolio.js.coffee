@@ -9,13 +9,19 @@ $(document).ready ->
     #Navigation
     ###
     menu: false
+    ###
+
     anchors: [
-      "firstSlide"
-      "secondSlide"
+      "top"
+      "about"
+      "projects"
+      #"resume"
     ]
+    ###
     ###
     navigation: true
     navigationPosition: "right"
+   
     navigationTooltips: [
       "firstSlide"
       "secondSlide"
@@ -37,7 +43,7 @@ $(document).ready ->
     loopHorizontal: true
     continuousVertical: false
     normalScrollElements: "#element1, .element2"
-    scrollOverflow: true
+    scrollOverflow: false
     touchSensitivity: 15
     normalScrollElementTouchThreshold: 5
     
@@ -51,10 +57,12 @@ $(document).ready ->
     sectionsColor: [
       "#ffffea"
       "#ffffea"
+      "#ffffea"
+      "#ffffea"
     ]
-    paddingTop: "none"
-    paddingBottom: "3em"
-    fixedElements: "#header, .footer"
+    paddingTop: "-3em"
+    paddingBottom: "none"
+    fixedElements: ".topNav, .menu, .footer"
     responsive: 0
     
     #Custom selectors

@@ -1,18 +1,36 @@
 // Place all the styles related to the Portfolio controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#fullpage {
+    .section, .fp-section, .fp-slides, .fp-slidesContainer, .slide{
+        padding: none;
+        background-color: #ffffea !important;
+    }
+    #splash {
+        img {
+            max-height: 90%;
+            max-width: 100%;
+        }
+    }
 
-#fullpage{
-	.section, .fp-section{
-		padding: none;
+.projectDescription{
+    p{
+        float: right;
+}
+    }
+    
 
-	background-color: #ffffea;
 }
 
-#splash{
-	img{ 
-		max-height: 90%;
-		max-width: 100%;
-	}
+body, p, ol, ul, td{
+
+    font-size: 3em;
+    color: #b8b18c;
 }
+
+.projectDescription{
+    p{
+        float: right;
 }
+    }
+    
