@@ -8,7 +8,7 @@ GIT
 
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 1b2a3ca57d121ba0ec281a10ebd07a9d11bda873
+  revision: 275c6a868074a3a8237678826c0bc0cbadbfbd2a
   specs:
     rails_admin (0.6.5)
       builder (~> 3.1)
@@ -27,7 +27,7 @@ GIT
 
 GIT
   remote: git://github.com/thoughtbot/paperclip.git
-  revision: 804b4edc1d8d7ca9865170e34f26da7d66f6d0d5
+  revision: 679c1cf8491e755a3afd940c1daeb6f80d92d11c
   specs:
     paperclip (4.2.0)
       activemodel (>= 3.0.0)
@@ -66,6 +66,9 @@ GEM
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
     bcrypt (3.1.9)
+    breakpoint (2.5.0)
+      sass (~> 3.3)
+      sassy-maps (< 1.0.0)
     builder (3.2.2)
     chunky_png (1.3.3)
     climate_control (0.0.3)
@@ -170,7 +173,7 @@ GEM
     rb-fsevent (0.9.4)
     rb-inotify (0.9.5)
       ffi (>= 0.5.0)
-    rdoc (4.1.2)
+    rdoc (4.2.0)
       json (~> 1.4)
     remotipart (1.2.1)
     responders (1.1.2)
@@ -181,6 +184,8 @@ GEM
       railties (>= 4.0.0, < 5.0)
       sass (>= 3.1.10)
       sprockets-rails (~> 2.0.0)
+    sassy-maps (0.4.0)
+      sass (~> 3.3)
     sdoc (0.4.1)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
@@ -197,11 +202,11 @@ GEM
     thor (0.19.1)
     thread_safe (0.3.4)
     tilt (1.4.1)
-    turbolinks (2.5.2)
+    turbolinks (2.5.3)
       coffee-rails
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (2.5.3)
+    uglifier (2.6.0)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
     unicorn (4.8.3)
@@ -215,6 +220,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  breakpoint (~> 2.5.0)
   coffee-rails (~> 4.0.0)
   compass-rails!
   compass-susy-plugin

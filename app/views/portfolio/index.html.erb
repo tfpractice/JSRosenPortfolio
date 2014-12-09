@@ -1,63 +1,45 @@
-	<div class="section" data-anchor="top" >
-		<%= image_tag("site_bg_0.jpg")%>
-		<!-- <h1>Splash/Home</h1>
-		<p>Find me in app/views/portfolio/index.html.erb 		Some section
-</p> -->
 
+
+	<div class="section" data-anchor="top" >
+
+<div class "sectionContainer">
+		<%= image_tag("site_bg_0.jpg")%>
+
+	</div>
+		
 	</div>
 
 	<div class="section" data-anchor="about" >
-<p>		about
-</p>
+<div class = "sectionContainer">
+		<h1>about</h1>
+</div>
 
 	</div>
 	
 
 	<div class="section" data-anchor="projects">
-		<ul class = "projectsList" id ="homeProjectList">
-			<% @projects.each do |project| %>
-			<li class = "menuItem"> <%=project.title%> </li>
-			<% end %>
-		</ul>
-		
-		<% @projects.each do |project| %>
-		<div class="slide" data-anchor="slide1" > Category 1 
 
-					<p>HERE IS SOME CONTENT</p>
-		
-					<%= render "projects" %>
-		</div>
+			<ul class = "projectList fp-slidesNav" id ="homeProjectList">
+					<% @categories.each do |category| %>
+					<li class = "menuItem"> <a href = #> <%=category.name.upcase%> </a> </li>
 					<% end %>
-
-		<div class="slide" data-anchor="slide2"> Category 2 
-
-					<%= image_tag("logo_large_white.png")%>
-
-
-
-		</div>
-
-		<div class="slide"  data-anchor="slide3"> Category 3 
-
-			HERE IS SOME CONTENT
-								<%= image_tag("logo_large_brown.svg")%>
-
-
-
-		</div><!-- 
-
-		<div class="slide"> Category 4 
-
-			HERE IS SOME CONTENT
-
-
-		</div> -->
+				</ul>
+				
+				<% @categories.each do |category| %>
+				<div class="slide" data-anchor="slide<%=category.id%>" >
+		
+							<%= render "categories" %>
+				</div>
+							<% end %>
+		
 	</div>
 
 
-	<section class="section" id ="Résumé/CV" data-anchor="resume" >
-		Résumé/CV
-	</section>
+	<div class="section" id ="Résumé/CV" data-anchor="resume" >
+		<div class = "sectionContainer">
+			<h1>Résumé/CV</h1>
+		</div>
+	</div>
 
 
 

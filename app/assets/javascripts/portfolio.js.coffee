@@ -2,10 +2,10 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
- # $("#menu").scrollToFixed()
+  #$("#menu").scrollToFixed()
   
   $("#fullpage").fullpage
-    menu: "#menu"
+    
     #Navigation
     ###
     menu: false
@@ -15,17 +15,18 @@ $(document).ready ->
       "top"
       "about"
       "projects"
-      #"resume"
+      "resume"
     ]
+    menu: false
     ###
     ###
     navigation: true
-    navigationPosition: "right"
+    navigationPosition: "left"
    
-    navigationTooltips: [
-      "firstSlide"
-      "secondSlide"
-    ]
+    # navigationTooltips: [
+    #   "firstSlide"
+    #   "secondSlide"
+    # ]
     ###
     ###
     slidesNavigation: true
@@ -38,10 +39,10 @@ $(document).ready ->
     scrollBar: false
     easing: "easeInQuart"
     easingcss3: "ease"
-    loopBottom: false
+    loopBottom: true
     loopTop: false
     loopHorizontal: true
-    continuousVertical: false
+    continuousVertical: true
     normalScrollElements: "#element1, .element2"
     scrollOverflow: false
     touchSensitivity: 15
@@ -60,9 +61,9 @@ $(document).ready ->
       "#ffffea"
       "#ffffea"
     ]
-    paddingTop: "-3em"
-    paddingBottom: "none"
-    fixedElements: ".topNav, .menu, .footer"
+    paddingTop: "none"
+    paddingBottom: "3em"
+    fixedElements: ".footer"
     responsive: 0
     
     #Custom selectors

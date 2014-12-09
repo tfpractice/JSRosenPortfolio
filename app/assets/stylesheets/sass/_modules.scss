@@ -1,0 +1,58 @@
+@import "base";
+@import "susy";
+@import "breakpoint";
+
+.section{
+
+	//margin-bottom: -2em !important;
+.sectionContainer{
+			@include columns(16);
+			margin-left: columns(5);
+
+
+}
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: box;
+    width: 100%;
+
+.fp-tableCell {
+    display: box;
+    vertical-align: baseline;
+    width: 100%;
+    height: 100%;
+}
+
+}
+
+
+.projectList{
+	float: right;
+}
+
+#menu{
+	@include columns(4);
+}
+
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: none !important;
+    top: 5%;
+    opacity: 1;
+}
+.projectList{
+	display: inline-flex;
+	float: right;
+	margin: 1em;
+	.menuItem{
+		margin: 1em;
+	}
+}
+
+li{
+	img{
+		max-height: 100px;
+		margin-top: 2em;
+	}
+}

@@ -1,0 +1,484 @@
+/**
+ * fullPage 2.4.6
+ * https://github.com/alvarotrigo/fullPage.js
+ * MIT licensed
+ *
+ * Copyright (C) 2013 alvarotrigo.com - A project by Alvaro Trigo
+ */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow:hidden;
+
+    /*Avoid flicker on slides transitions for mobile phones #336 */
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+#superContainer {
+    height: 100%;
+    position: relative;
+
+    /* Touch detection for Windows 8 */
+    -ms-touch-action: none;
+
+    /* IE 11 on Windows Phone 8.1*/
+    touch-action: none;
+}
+.fp-section {
+    position: relative;
+    -webkit-box-sizing: border-box; /* Safari<=5 Android<=3 */
+    -moz-box-sizing: border-box; /* <=28 */
+    box-sizing: border-box;
+}
+.fp-slide {
+    float: left;
+}
+.fp-slide, .fp-slidesContainer {
+    height: 100%;
+    display: block;
+}
+.fp-slides {
+    z-index:1;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out; /* Safari<=6 Android<=4.3 */
+    transition: all 0.3s ease-out;
+}
+.fp-section.fp-table, .fp-slide.fp-table {
+    display: table;
+    width: 100%;
+}
+.fp-tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100%;
+    height: 100%;
+}
+.fp-slidesContainer {
+    float: left;
+    position: relative;
+}
+.fp-controlArrow {
+    position: absolute;
+    z-index: 4;
+    top: 50%;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    margin-top: -38px;
+}
+.fp-controlArrow.fp-prev {
+    left: 15px;
+    width: 0;
+    border-width: 38.5px 34px 38.5px 0;
+    border-color: transparent #b8b18c transparent transparent;
+}
+.fp-controlArrow.fp-next {
+    right: 15px;
+    border-width: 38.5px 0 38.5px 34px;
+    border-color: transparent transparent transparent #b8b18c;
+}
+.fp-scrollable {
+    overflow: scroll;
+
+}
+.fp-notransition {
+    -webkit-transition: none !important;
+    transition: none !important;
+}
+#fp-nav {
+    position: fixed;
+    z-index: 100;
+    /*margin-top: -32px;*/
+    margin-top: 0px;
+    top: 50%;
+    opacity: 1;
+}
+#fp-nav.right {
+    right: 17px;
+}
+#fp-nav.left {
+    left: 17px;
+}
+.fp-slidesNav{
+    position: absolute;
+    z-index: 4;
+    left: 50%;
+    opacity: 1;
+}
+.fp-slidesNav.bottom {
+    bottom: 17px;
+}
+.fp-slidesNav.top {
+    top: 17px;
+}
+#fp-nav ul,
+.fp-slidesNav ul {
+  margin: 0;
+  padding: 0;
+}
+#fp-nav ul li,
+.fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position:relative;
+}
+.fp-slidesNav ul li {
+    display: inline-block;
+}
+#fp-nav ul li a,
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span {
+    background: #333;
+}
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+    top: 2px;
+    left: 2px;
+    width: 8px;
+    height: 8px;
+    border: 1px solid #000;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+}
+#fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #fff;
+    font-size: 3em;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+}
+#fp-nav ul li:hover .fp-tooltip {
+    -webkit-transition: opacity 0.2s ease-in;
+    transition: opacity 0.2s ease-in;
+    width: auto;
+    opacity: 1;
+}
+#fp-nav ul li .fp-tooltip.right {
+    right: 20px;
+}
+#fp-nav ul li .fp-tooltip.left {
+    left: 20px;
+}
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+
+/* line 5, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+#fullpage .section, #fullpage .fp-section, #fullpage .fp-slides, #fullpage .fp-slidesContainer, #fullpage .slide {
+  padding: none;
+  background-color: #ffffea !important;
+}
+/* line 10, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+#fullpage #splash img {
+  max-height: 90%;
+  max-width: 100%;
+}
+/* line 17, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+#fullpage .projectDescription p {
+  float: right;
+}
+
+/* line 25, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+body, p, ol, ul, td {
+  font-size: 3em;
+  color: #b8b18c;
+}
+
+/* line 32, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+.projectDescription p {
+  float: right;
+}
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
+/* line 8, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.section .sectionContainer {
+  float: left;
+  width: 65.28926%;
+  margin-right: 0.82645%;
+  margin-left: 19.83471%;
+}
+
+/* line 15, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-section.fp-table, .fp-slide.fp-table {
+  display: box;
+  width: 100%;
+}
+/* line 19, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-section.fp-table .fp-tableCell, .fp-slide.fp-table .fp-tableCell {
+  display: box;
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 29, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList {
+  float: right;
+}
+
+/* line 33, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#menu {
+  float: left;
+  width: 15.70248%;
+  margin-right: 0.82645%;
+}
+
+/* line 37, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  margin-top: none !important;
+  top: 5%;
+  opacity: 1;
+}
+
+/* line 44, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList {
+  display: inline-flex;
+  float: right;
+  margin: 1em;
+}
+/* line 48, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList .menuItem {
+  margin: 1em;
+}
+
+/* line 54, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+li img {
+  max-height: 100px;
+  margin-top: 2em;
+}
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
+/* line 8, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.section .sectionContainer {
+  float: left;
+  width: 65.28926%;
+  margin-right: 0.82645%;
+  margin-left: 19.83471%;
+}
+
+/* line 15, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-section.fp-table, .fp-slide.fp-table {
+  display: box;
+  width: 100%;
+}
+/* line 19, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-section.fp-table .fp-tableCell, .fp-slide.fp-table .fp-tableCell {
+  display: box;
+  vertical-align: baseline;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 29, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList {
+  float: right;
+}
+
+/* line 33, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#menu {
+  float: left;
+  width: 15.70248%;
+  margin-right: 0.82645%;
+}
+
+/* line 37, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  margin-top: none !important;
+  top: 5%;
+  opacity: 1;
+}
+
+/* line 44, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList {
+  display: inline-flex;
+  float: right;
+  margin: 1em;
+}
+/* line 48, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList .menuItem {
+  margin: 1em;
+}
+
+/* line 54, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+li img {
+  max-height: 100px;
+  margin-top: 2em;
+}
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+@import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
+/* Layout ------------------------------------------------------------------*/
+/* line 7, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/screen.scss */
+.container {
+  *zoom: 1;
+  margin: auto;
+  width: 121em;
+  max-width: 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwLjgyNjQ1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjAuODI2NDUlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQuMTMyMjMlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQuMTMyMjMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNC45NTg2OCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0Ljk1ODY4JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4LjI2NDQ2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4LjI2NDQ2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkuMDkwOTElIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOS4wOTA5MSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMTIuMzk2NjklIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjEyLjM5NjY5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEzLjIyMzE0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEzLjIyMzE0JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxNi41Mjg5MyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMTYuNTI4OTMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTcuMzU1MzclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTcuMzU1MzclIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjIwLjY2MTE2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIyMC42NjExNiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyMS40ODc2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjIxLjQ4NzYlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjI0Ljc5MzM5JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIyNC43OTMzOSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyNS42MTk4MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyNS42MTk4MyUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMjguOTI1NjIlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjI4LjkyNTYyJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjI5Ljc1MjA3JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjI5Ljc1MjA3JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIzMy4wNTc4NSUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMzMuMDU3ODUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMzMuODg0MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIzMy44ODQzJSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIzNy4xOTAwOCUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMzcuMTkwMDglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMzguMDE2NTMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMzguMDE2NTMlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQxLjMyMjMxJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI0MS4zMjIzMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0Mi4xNDg3NiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0Mi4xNDg3NiUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNDUuNDU0NTUlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQ1LjQ1NDU1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQ2LjI4MDk5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQ2LjI4MDk5JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI0OS41ODY3OCUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNDkuNTg2NzglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNTAuNDEzMjIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNTAuNDEzMjIlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjUzLjcxOTAxJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI1My43MTkwMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1NC41NDU0NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1NC41NDU0NSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNTcuODUxMjQlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjU3Ljg1MTI0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjU4LjY3NzY5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjU4LjY3NzY5JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI2MS45ODM0NyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNjEuOTgzNDclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjIuODA5OTIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjIuODA5OTIlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjY2LjExNTclIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjY2LjExNTclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjYuOTQyMTUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjYuOTQyMTUlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjcwLjI0NzkzJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3MC4yNDc5MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3MS4wNzQzOCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3MS4wNzQzOCUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNzQuMzgwMTclIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijc0LjM4MDE3JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1LjIwNjYxJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1LjIwNjYxJSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3OC41MTI0JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3OC41MTI0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc5LjMzODg0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc5LjMzODg0JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4Mi42NDQ2MyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iODIuNjQ0NjMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iODMuNDcxMDclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iODMuNDcxMDclIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijg2Ljc3Njg2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4Ni43NzY4NiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI4Ny42MDMzMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI4Ny42MDMzMSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iOTAuOTA5MDklIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjkwLjkwOTA5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkxLjczNTU0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkxLjczNTU0JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5NS4wNDEzMiUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iOTUuMDQxMzIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOTUuODY3NzclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOTUuODY3NzclIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijk5LjE3MzU1JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5OS4xNzM1NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0.82645%, rgba(0, 0, 0, 0)), color-stop(0.82645%, rgba(121, 121, 229, 0.25)), color-stop(4.13223%, rgba(79, 79, 221, 0.25)), color-stop(4.13223%, rgba(0, 0, 0, 0)), color-stop(4.95868%, rgba(0, 0, 0, 0)), color-stop(4.95868%, rgba(121, 121, 229, 0.25)), color-stop(8.26446%, rgba(79, 79, 221, 0.25)), color-stop(8.26446%, rgba(0, 0, 0, 0)), color-stop(9.09091%, rgba(0, 0, 0, 0)), color-stop(9.09091%, rgba(121, 121, 229, 0.25)), color-stop(12.39669%, rgba(79, 79, 221, 0.25)), color-stop(12.39669%, rgba(0, 0, 0, 0)), color-stop(13.22314%, rgba(0, 0, 0, 0)), color-stop(13.22314%, rgba(121, 121, 229, 0.25)), color-stop(16.52893%, rgba(79, 79, 221, 0.25)), color-stop(16.52893%, rgba(0, 0, 0, 0)), color-stop(17.35537%, rgba(0, 0, 0, 0)), color-stop(17.35537%, rgba(121, 121, 229, 0.25)), color-stop(20.66116%, rgba(79, 79, 221, 0.25)), color-stop(20.66116%, rgba(0, 0, 0, 0)), color-stop(21.4876%, rgba(0, 0, 0, 0)), color-stop(21.4876%, rgba(121, 121, 229, 0.25)), color-stop(24.79339%, rgba(79, 79, 221, 0.25)), color-stop(24.79339%, rgba(0, 0, 0, 0)), color-stop(25.61983%, rgba(0, 0, 0, 0)), color-stop(25.61983%, rgba(121, 121, 229, 0.25)), color-stop(28.92562%, rgba(79, 79, 221, 0.25)), color-stop(28.92562%, rgba(0, 0, 0, 0)), color-stop(29.75207%, rgba(0, 0, 0, 0)), color-stop(29.75207%, rgba(121, 121, 229, 0.25)), color-stop(33.05785%, rgba(79, 79, 221, 0.25)), color-stop(33.05785%, rgba(0, 0, 0, 0)), color-stop(33.8843%, rgba(0, 0, 0, 0)), color-stop(33.8843%, rgba(121, 121, 229, 0.25)), color-stop(37.19008%, rgba(79, 79, 221, 0.25)), color-stop(37.19008%, rgba(0, 0, 0, 0)), color-stop(38.01653%, rgba(0, 0, 0, 0)), color-stop(38.01653%, rgba(121, 121, 229, 0.25)), color-stop(41.32231%, rgba(79, 79, 221, 0.25)), color-stop(41.32231%, rgba(0, 0, 0, 0)), color-stop(42.14876%, rgba(0, 0, 0, 0)), color-stop(42.14876%, rgba(121, 121, 229, 0.25)), color-stop(45.45455%, rgba(79, 79, 221, 0.25)), color-stop(45.45455%, rgba(0, 0, 0, 0)), color-stop(46.28099%, rgba(0, 0, 0, 0)), color-stop(46.28099%, rgba(121, 121, 229, 0.25)), color-stop(49.58678%, rgba(79, 79, 221, 0.25)), color-stop(49.58678%, rgba(0, 0, 0, 0)), color-stop(50.41322%, rgba(0, 0, 0, 0)), color-stop(50.41322%, rgba(121, 121, 229, 0.25)), color-stop(53.71901%, rgba(79, 79, 221, 0.25)), color-stop(53.71901%, rgba(0, 0, 0, 0)), color-stop(54.54545%, rgba(0, 0, 0, 0)), color-stop(54.54545%, rgba(121, 121, 229, 0.25)), color-stop(57.85124%, rgba(79, 79, 221, 0.25)), color-stop(57.85124%, rgba(0, 0, 0, 0)), color-stop(58.67769%, rgba(0, 0, 0, 0)), color-stop(58.67769%, rgba(121, 121, 229, 0.25)), color-stop(61.98347%, rgba(79, 79, 221, 0.25)), color-stop(61.98347%, rgba(0, 0, 0, 0)), color-stop(62.80992%, rgba(0, 0, 0, 0)), color-stop(62.80992%, rgba(121, 121, 229, 0.25)), color-stop(66.1157%, rgba(79, 79, 221, 0.25)), color-stop(66.1157%, rgba(0, 0, 0, 0)), color-stop(66.94215%, rgba(0, 0, 0, 0)), color-stop(66.94215%, rgba(121, 121, 229, 0.25)), color-stop(70.24793%, rgba(79, 79, 221, 0.25)), color-stop(70.24793%, rgba(0, 0, 0, 0)), color-stop(71.07438%, rgba(0, 0, 0, 0)), color-stop(71.07438%, rgba(121, 121, 229, 0.25)), color-stop(74.38017%, rgba(79, 79, 221, 0.25)), color-stop(74.38017%, rgba(0, 0, 0, 0)), color-stop(75.20661%, rgba(0, 0, 0, 0)), color-stop(75.20661%, rgba(121, 121, 229, 0.25)), color-stop(78.5124%, rgba(79, 79, 221, 0.25)), color-stop(78.5124%, rgba(0, 0, 0, 0)), color-stop(79.33884%, rgba(0, 0, 0, 0)), color-stop(79.33884%, rgba(121, 121, 229, 0.25)), color-stop(82.64463%, rgba(79, 79, 221, 0.25)), color-stop(82.64463%, rgba(0, 0, 0, 0)), color-stop(83.47107%, rgba(0, 0, 0, 0)), color-stop(83.47107%, rgba(121, 121, 229, 0.25)), color-stop(86.77686%, rgba(79, 79, 221, 0.25)), color-stop(86.77686%, rgba(0, 0, 0, 0)), color-stop(87.60331%, rgba(0, 0, 0, 0)), color-stop(87.60331%, rgba(121, 121, 229, 0.25)), color-stop(90.90909%, rgba(79, 79, 221, 0.25)), color-stop(90.90909%, rgba(0, 0, 0, 0)), color-stop(91.73554%, rgba(0, 0, 0, 0)), color-stop(91.73554%, rgba(121, 121, 229, 0.25)), color-stop(95.04132%, rgba(79, 79, 221, 0.25)), color-stop(95.04132%, rgba(0, 0, 0, 0)), color-stop(95.86777%, rgba(0, 0, 0, 0)), color-stop(95.86777%, rgba(121, 121, 229, 0.25)), color-stop(99.17355%, rgba(79, 79, 221, 0.25)), color-stop(99.17355%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0.82645%, rgba(121, 121, 229, 0.25) 0.82645%, rgba(79, 79, 221, 0.25) 4.13223%, rgba(0, 0, 0, 0) 4.13223%, rgba(0, 0, 0, 0) 4.95868%, rgba(121, 121, 229, 0.25) 4.95868%, rgba(79, 79, 221, 0.25) 8.26446%, rgba(0, 0, 0, 0) 8.26446%, rgba(0, 0, 0, 0) 9.09091%, rgba(121, 121, 229, 0.25) 9.09091%, rgba(79, 79, 221, 0.25) 12.39669%, rgba(0, 0, 0, 0) 12.39669%, rgba(0, 0, 0, 0) 13.22314%, rgba(121, 121, 229, 0.25) 13.22314%, rgba(79, 79, 221, 0.25) 16.52893%, rgba(0, 0, 0, 0) 16.52893%, rgba(0, 0, 0, 0) 17.35537%, rgba(121, 121, 229, 0.25) 17.35537%, rgba(79, 79, 221, 0.25) 20.66116%, rgba(0, 0, 0, 0) 20.66116%, rgba(0, 0, 0, 0) 21.4876%, rgba(121, 121, 229, 0.25) 21.4876%, rgba(79, 79, 221, 0.25) 24.79339%, rgba(0, 0, 0, 0) 24.79339%, rgba(0, 0, 0, 0) 25.61983%, rgba(121, 121, 229, 0.25) 25.61983%, rgba(79, 79, 221, 0.25) 28.92562%, rgba(0, 0, 0, 0) 28.92562%, rgba(0, 0, 0, 0) 29.75207%, rgba(121, 121, 229, 0.25) 29.75207%, rgba(79, 79, 221, 0.25) 33.05785%, rgba(0, 0, 0, 0) 33.05785%, rgba(0, 0, 0, 0) 33.8843%, rgba(121, 121, 229, 0.25) 33.8843%, rgba(79, 79, 221, 0.25) 37.19008%, rgba(0, 0, 0, 0) 37.19008%, rgba(0, 0, 0, 0) 38.01653%, rgba(121, 121, 229, 0.25) 38.01653%, rgba(79, 79, 221, 0.25) 41.32231%, rgba(0, 0, 0, 0) 41.32231%, rgba(0, 0, 0, 0) 42.14876%, rgba(121, 121, 229, 0.25) 42.14876%, rgba(79, 79, 221, 0.25) 45.45455%, rgba(0, 0, 0, 0) 45.45455%, rgba(0, 0, 0, 0) 46.28099%, rgba(121, 121, 229, 0.25) 46.28099%, rgba(79, 79, 221, 0.25) 49.58678%, rgba(0, 0, 0, 0) 49.58678%, rgba(0, 0, 0, 0) 50.41322%, rgba(121, 121, 229, 0.25) 50.41322%, rgba(79, 79, 221, 0.25) 53.71901%, rgba(0, 0, 0, 0) 53.71901%, rgba(0, 0, 0, 0) 54.54545%, rgba(121, 121, 229, 0.25) 54.54545%, rgba(79, 79, 221, 0.25) 57.85124%, rgba(0, 0, 0, 0) 57.85124%, rgba(0, 0, 0, 0) 58.67769%, rgba(121, 121, 229, 0.25) 58.67769%, rgba(79, 79, 221, 0.25) 61.98347%, rgba(0, 0, 0, 0) 61.98347%, rgba(0, 0, 0, 0) 62.80992%, rgba(121, 121, 229, 0.25) 62.80992%, rgba(79, 79, 221, 0.25) 66.1157%, rgba(0, 0, 0, 0) 66.1157%, rgba(0, 0, 0, 0) 66.94215%, rgba(121, 121, 229, 0.25) 66.94215%, rgba(79, 79, 221, 0.25) 70.24793%, rgba(0, 0, 0, 0) 70.24793%, rgba(0, 0, 0, 0) 71.07438%, rgba(121, 121, 229, 0.25) 71.07438%, rgba(79, 79, 221, 0.25) 74.38017%, rgba(0, 0, 0, 0) 74.38017%, rgba(0, 0, 0, 0) 75.20661%, rgba(121, 121, 229, 0.25) 75.20661%, rgba(79, 79, 221, 0.25) 78.5124%, rgba(0, 0, 0, 0) 78.5124%, rgba(0, 0, 0, 0) 79.33884%, rgba(121, 121, 229, 0.25) 79.33884%, rgba(79, 79, 221, 0.25) 82.64463%, rgba(0, 0, 0, 0) 82.64463%, rgba(0, 0, 0, 0) 83.47107%, rgba(121, 121, 229, 0.25) 83.47107%, rgba(79, 79, 221, 0.25) 86.77686%, rgba(0, 0, 0, 0) 86.77686%, rgba(0, 0, 0, 0) 87.60331%, rgba(121, 121, 229, 0.25) 87.60331%, rgba(79, 79, 221, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%, rgba(0, 0, 0, 0) 91.73554%, rgba(121, 121, 229, 0.25) 91.73554%, rgba(79, 79, 221, 0.25) 95.04132%, rgba(0, 0, 0, 0) 95.04132%, rgba(0, 0, 0, 0) 95.86777%, rgba(121, 121, 229, 0.25) 95.86777%, rgba(79, 79, 221, 0.25) 99.17355%, rgba(0, 0, 0, 0) 99.17355%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0.82645%, rgba(121, 121, 229, 0.25) 0.82645%, rgba(79, 79, 221, 0.25) 4.13223%, rgba(0, 0, 0, 0) 4.13223%, rgba(0, 0, 0, 0) 4.95868%, rgba(121, 121, 229, 0.25) 4.95868%, rgba(79, 79, 221, 0.25) 8.26446%, rgba(0, 0, 0, 0) 8.26446%, rgba(0, 0, 0, 0) 9.09091%, rgba(121, 121, 229, 0.25) 9.09091%, rgba(79, 79, 221, 0.25) 12.39669%, rgba(0, 0, 0, 0) 12.39669%, rgba(0, 0, 0, 0) 13.22314%, rgba(121, 121, 229, 0.25) 13.22314%, rgba(79, 79, 221, 0.25) 16.52893%, rgba(0, 0, 0, 0) 16.52893%, rgba(0, 0, 0, 0) 17.35537%, rgba(121, 121, 229, 0.25) 17.35537%, rgba(79, 79, 221, 0.25) 20.66116%, rgba(0, 0, 0, 0) 20.66116%, rgba(0, 0, 0, 0) 21.4876%, rgba(121, 121, 229, 0.25) 21.4876%, rgba(79, 79, 221, 0.25) 24.79339%, rgba(0, 0, 0, 0) 24.79339%, rgba(0, 0, 0, 0) 25.61983%, rgba(121, 121, 229, 0.25) 25.61983%, rgba(79, 79, 221, 0.25) 28.92562%, rgba(0, 0, 0, 0) 28.92562%, rgba(0, 0, 0, 0) 29.75207%, rgba(121, 121, 229, 0.25) 29.75207%, rgba(79, 79, 221, 0.25) 33.05785%, rgba(0, 0, 0, 0) 33.05785%, rgba(0, 0, 0, 0) 33.8843%, rgba(121, 121, 229, 0.25) 33.8843%, rgba(79, 79, 221, 0.25) 37.19008%, rgba(0, 0, 0, 0) 37.19008%, rgba(0, 0, 0, 0) 38.01653%, rgba(121, 121, 229, 0.25) 38.01653%, rgba(79, 79, 221, 0.25) 41.32231%, rgba(0, 0, 0, 0) 41.32231%, rgba(0, 0, 0, 0) 42.14876%, rgba(121, 121, 229, 0.25) 42.14876%, rgba(79, 79, 221, 0.25) 45.45455%, rgba(0, 0, 0, 0) 45.45455%, rgba(0, 0, 0, 0) 46.28099%, rgba(121, 121, 229, 0.25) 46.28099%, rgba(79, 79, 221, 0.25) 49.58678%, rgba(0, 0, 0, 0) 49.58678%, rgba(0, 0, 0, 0) 50.41322%, rgba(121, 121, 229, 0.25) 50.41322%, rgba(79, 79, 221, 0.25) 53.71901%, rgba(0, 0, 0, 0) 53.71901%, rgba(0, 0, 0, 0) 54.54545%, rgba(121, 121, 229, 0.25) 54.54545%, rgba(79, 79, 221, 0.25) 57.85124%, rgba(0, 0, 0, 0) 57.85124%, rgba(0, 0, 0, 0) 58.67769%, rgba(121, 121, 229, 0.25) 58.67769%, rgba(79, 79, 221, 0.25) 61.98347%, rgba(0, 0, 0, 0) 61.98347%, rgba(0, 0, 0, 0) 62.80992%, rgba(121, 121, 229, 0.25) 62.80992%, rgba(79, 79, 221, 0.25) 66.1157%, rgba(0, 0, 0, 0) 66.1157%, rgba(0, 0, 0, 0) 66.94215%, rgba(121, 121, 229, 0.25) 66.94215%, rgba(79, 79, 221, 0.25) 70.24793%, rgba(0, 0, 0, 0) 70.24793%, rgba(0, 0, 0, 0) 71.07438%, rgba(121, 121, 229, 0.25) 71.07438%, rgba(79, 79, 221, 0.25) 74.38017%, rgba(0, 0, 0, 0) 74.38017%, rgba(0, 0, 0, 0) 75.20661%, rgba(121, 121, 229, 0.25) 75.20661%, rgba(79, 79, 221, 0.25) 78.5124%, rgba(0, 0, 0, 0) 78.5124%, rgba(0, 0, 0, 0) 79.33884%, rgba(121, 121, 229, 0.25) 79.33884%, rgba(79, 79, 221, 0.25) 82.64463%, rgba(0, 0, 0, 0) 82.64463%, rgba(0, 0, 0, 0) 83.47107%, rgba(121, 121, 229, 0.25) 83.47107%, rgba(79, 79, 221, 0.25) 86.77686%, rgba(0, 0, 0, 0) 86.77686%, rgba(0, 0, 0, 0) 87.60331%, rgba(121, 121, 229, 0.25) 87.60331%, rgba(79, 79, 221, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%, rgba(0, 0, 0, 0) 91.73554%, rgba(121, 121, 229, 0.25) 91.73554%, rgba(79, 79, 221, 0.25) 95.04132%, rgba(0, 0, 0, 0) 95.04132%, rgba(0, 0, 0, 0) 95.86777%, rgba(121, 121, 229, 0.25) 95.86777%, rgba(79, 79, 221, 0.25) 99.17355%, rgba(0, 0, 0, 0) 99.17355%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0.82645%, rgba(121, 121, 229, 0.25) 0.82645%, rgba(79, 79, 221, 0.25) 4.13223%, rgba(0, 0, 0, 0) 4.13223%, rgba(0, 0, 0, 0) 4.95868%, rgba(121, 121, 229, 0.25) 4.95868%, rgba(79, 79, 221, 0.25) 8.26446%, rgba(0, 0, 0, 0) 8.26446%, rgba(0, 0, 0, 0) 9.09091%, rgba(121, 121, 229, 0.25) 9.09091%, rgba(79, 79, 221, 0.25) 12.39669%, rgba(0, 0, 0, 0) 12.39669%, rgba(0, 0, 0, 0) 13.22314%, rgba(121, 121, 229, 0.25) 13.22314%, rgba(79, 79, 221, 0.25) 16.52893%, rgba(0, 0, 0, 0) 16.52893%, rgba(0, 0, 0, 0) 17.35537%, rgba(121, 121, 229, 0.25) 17.35537%, rgba(79, 79, 221, 0.25) 20.66116%, rgba(0, 0, 0, 0) 20.66116%, rgba(0, 0, 0, 0) 21.4876%, rgba(121, 121, 229, 0.25) 21.4876%, rgba(79, 79, 221, 0.25) 24.79339%, rgba(0, 0, 0, 0) 24.79339%, rgba(0, 0, 0, 0) 25.61983%, rgba(121, 121, 229, 0.25) 25.61983%, rgba(79, 79, 221, 0.25) 28.92562%, rgba(0, 0, 0, 0) 28.92562%, rgba(0, 0, 0, 0) 29.75207%, rgba(121, 121, 229, 0.25) 29.75207%, rgba(79, 79, 221, 0.25) 33.05785%, rgba(0, 0, 0, 0) 33.05785%, rgba(0, 0, 0, 0) 33.8843%, rgba(121, 121, 229, 0.25) 33.8843%, rgba(79, 79, 221, 0.25) 37.19008%, rgba(0, 0, 0, 0) 37.19008%, rgba(0, 0, 0, 0) 38.01653%, rgba(121, 121, 229, 0.25) 38.01653%, rgba(79, 79, 221, 0.25) 41.32231%, rgba(0, 0, 0, 0) 41.32231%, rgba(0, 0, 0, 0) 42.14876%, rgba(121, 121, 229, 0.25) 42.14876%, rgba(79, 79, 221, 0.25) 45.45455%, rgba(0, 0, 0, 0) 45.45455%, rgba(0, 0, 0, 0) 46.28099%, rgba(121, 121, 229, 0.25) 46.28099%, rgba(79, 79, 221, 0.25) 49.58678%, rgba(0, 0, 0, 0) 49.58678%, rgba(0, 0, 0, 0) 50.41322%, rgba(121, 121, 229, 0.25) 50.41322%, rgba(79, 79, 221, 0.25) 53.71901%, rgba(0, 0, 0, 0) 53.71901%, rgba(0, 0, 0, 0) 54.54545%, rgba(121, 121, 229, 0.25) 54.54545%, rgba(79, 79, 221, 0.25) 57.85124%, rgba(0, 0, 0, 0) 57.85124%, rgba(0, 0, 0, 0) 58.67769%, rgba(121, 121, 229, 0.25) 58.67769%, rgba(79, 79, 221, 0.25) 61.98347%, rgba(0, 0, 0, 0) 61.98347%, rgba(0, 0, 0, 0) 62.80992%, rgba(121, 121, 229, 0.25) 62.80992%, rgba(79, 79, 221, 0.25) 66.1157%, rgba(0, 0, 0, 0) 66.1157%, rgba(0, 0, 0, 0) 66.94215%, rgba(121, 121, 229, 0.25) 66.94215%, rgba(79, 79, 221, 0.25) 70.24793%, rgba(0, 0, 0, 0) 70.24793%, rgba(0, 0, 0, 0) 71.07438%, rgba(121, 121, 229, 0.25) 71.07438%, rgba(79, 79, 221, 0.25) 74.38017%, rgba(0, 0, 0, 0) 74.38017%, rgba(0, 0, 0, 0) 75.20661%, rgba(121, 121, 229, 0.25) 75.20661%, rgba(79, 79, 221, 0.25) 78.5124%, rgba(0, 0, 0, 0) 78.5124%, rgba(0, 0, 0, 0) 79.33884%, rgba(121, 121, 229, 0.25) 79.33884%, rgba(79, 79, 221, 0.25) 82.64463%, rgba(0, 0, 0, 0) 82.64463%, rgba(0, 0, 0, 0) 83.47107%, rgba(121, 121, 229, 0.25) 83.47107%, rgba(79, 79, 221, 0.25) 86.77686%, rgba(0, 0, 0, 0) 86.77686%, rgba(0, 0, 0, 0) 87.60331%, rgba(121, 121, 229, 0.25) 87.60331%, rgba(79, 79, 221, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%, rgba(0, 0, 0, 0) 91.73554%, rgba(121, 121, 229, 0.25) 91.73554%, rgba(79, 79, 221, 0.25) 95.04132%, rgba(0, 0, 0, 0) 95.04132%, rgba(0, 0, 0, 0) 95.86777%, rgba(121, 121, 229, 0.25) 95.86777%, rgba(79, 79, 221, 0.25) 99.17355%, rgba(0, 0, 0, 0) 99.17355%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
+}
+/* line 38, /Users/tfpractice/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #ffffea;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 9, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 15, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 21, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 38, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+/* Layout ------------------------------------------------------------------*/
+/* line 7, sass/screen.scss */
+
+.container {
+  *zoom: 1;
+  margin: auto;
+  width: 61em;
+  max-width: 100%;
+  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIxLjYzOTM0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEuNjM5MzQlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjguMTk2NzIlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjguMTk2NzIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOS44MzYwNyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI5LjgzNjA3JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxNi4zOTM0NCUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMTYuMzkzNDQlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTguMDMyNzklIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTguMDMyNzklIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjI0LjU5MDE2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIyNC41OTAxNiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyNi4yMjk1MSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyNi4yMjk1MSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMzIuNzg2ODklIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjMyLjc4Njg5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjM0LjQyNjIzJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjM0LjQyNjIzJSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI0MC45ODM2MSUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNDAuOTgzNjElIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNDIuNjIyOTUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNDIuNjIyOTUlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQ5LjE4MDMzJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI0OS4xODAzMyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1MC44MTk2NyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1MC44MTk2NyUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNTcuMzc3MDUlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjU3LjM3NzA1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjU5LjAxNjM5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjU5LjAxNjM5JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI2NS41NzM3NyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNjUuNTczNzclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjcuMjEzMTElIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjcuMjEzMTElIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjczLjc3MDQ5JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3My43NzA0OSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3NS40MDk4NCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3NS40MDk4NCUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iODEuOTY3MjElIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjgxLjk2NzIxJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjgzLjYwNjU2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjgzLjYwNjU2JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5MC4xNjM5MyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iOTAuMTYzOTMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOTEuODAzMjglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOTEuODAzMjglIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijk4LjM2MDY2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5OC4zNjA2NiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
+  background-size: 100%;
+  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(1.63934%, rgba(0, 0, 0, 0)), color-stop(1.63934%, rgba(121, 121, 229, 0.25)), color-stop(8.19672%, rgba(79, 79, 221, 0.25)), color-stop(8.19672%, rgba(0, 0, 0, 0)), color-stop(9.83607%, rgba(0, 0, 0, 0)), color-stop(9.83607%, rgba(121, 121, 229, 0.25)), color-stop(16.39344%, rgba(79, 79, 221, 0.25)), color-stop(16.39344%, rgba(0, 0, 0, 0)), color-stop(18.03279%, rgba(0, 0, 0, 0)), color-stop(18.03279%, rgba(121, 121, 229, 0.25)), color-stop(24.59016%, rgba(79, 79, 221, 0.25)), color-stop(24.59016%, rgba(0, 0, 0, 0)), color-stop(26.22951%, rgba(0, 0, 0, 0)), color-stop(26.22951%, rgba(121, 121, 229, 0.25)), color-stop(32.78689%, rgba(79, 79, 221, 0.25)), color-stop(32.78689%, rgba(0, 0, 0, 0)), color-stop(34.42623%, rgba(0, 0, 0, 0)), color-stop(34.42623%, rgba(121, 121, 229, 0.25)), color-stop(40.98361%, rgba(79, 79, 221, 0.25)), color-stop(40.98361%, rgba(0, 0, 0, 0)), color-stop(42.62295%, rgba(0, 0, 0, 0)), color-stop(42.62295%, rgba(121, 121, 229, 0.25)), color-stop(49.18033%, rgba(79, 79, 221, 0.25)), color-stop(49.18033%, rgba(0, 0, 0, 0)), color-stop(50.81967%, rgba(0, 0, 0, 0)), color-stop(50.81967%, rgba(121, 121, 229, 0.25)), color-stop(57.37705%, rgba(79, 79, 221, 0.25)), color-stop(57.37705%, rgba(0, 0, 0, 0)), color-stop(59.01639%, rgba(0, 0, 0, 0)), color-stop(59.01639%, rgba(121, 121, 229, 0.25)), color-stop(65.57377%, rgba(79, 79, 221, 0.25)), color-stop(65.57377%, rgba(0, 0, 0, 0)), color-stop(67.21311%, rgba(0, 0, 0, 0)), color-stop(67.21311%, rgba(121, 121, 229, 0.25)), color-stop(73.77049%, rgba(79, 79, 221, 0.25)), color-stop(73.77049%, rgba(0, 0, 0, 0)), color-stop(75.40984%, rgba(0, 0, 0, 0)), color-stop(75.40984%, rgba(121, 121, 229, 0.25)), color-stop(81.96721%, rgba(79, 79, 221, 0.25)), color-stop(81.96721%, rgba(0, 0, 0, 0)), color-stop(83.60656%, rgba(0, 0, 0, 0)), color-stop(83.60656%, rgba(121, 121, 229, 0.25)), color-stop(90.16393%, rgba(79, 79, 221, 0.25)), color-stop(90.16393%, rgba(0, 0, 0, 0)), color-stop(91.80328%, rgba(0, 0, 0, 0)), color-stop(91.80328%, rgba(121, 121, 229, 0.25)), color-stop(98.36066%, rgba(79, 79, 221, 0.25)), color-stop(98.36066%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 1.63934%, rgba(121, 121, 229, 0.25) 1.63934%, rgba(79, 79, 221, 0.25) 8.19672%, rgba(0, 0, 0, 0) 8.19672%, rgba(0, 0, 0, 0) 9.83607%, rgba(121, 121, 229, 0.25) 9.83607%, rgba(79, 79, 221, 0.25) 16.39344%, rgba(0, 0, 0, 0) 16.39344%, rgba(0, 0, 0, 0) 18.03279%, rgba(121, 121, 229, 0.25) 18.03279%, rgba(79, 79, 221, 0.25) 24.59016%, rgba(0, 0, 0, 0) 24.59016%, rgba(0, 0, 0, 0) 26.22951%, rgba(121, 121, 229, 0.25) 26.22951%, rgba(79, 79, 221, 0.25) 32.78689%, rgba(0, 0, 0, 0) 32.78689%, rgba(0, 0, 0, 0) 34.42623%, rgba(121, 121, 229, 0.25) 34.42623%, rgba(79, 79, 221, 0.25) 40.98361%, rgba(0, 0, 0, 0) 40.98361%, rgba(0, 0, 0, 0) 42.62295%, rgba(121, 121, 229, 0.25) 42.62295%, rgba(79, 79, 221, 0.25) 49.18033%, rgba(0, 0, 0, 0) 49.18033%, rgba(0, 0, 0, 0) 50.81967%, rgba(121, 121, 229, 0.25) 50.81967%, rgba(79, 79, 221, 0.25) 57.37705%, rgba(0, 0, 0, 0) 57.37705%, rgba(0, 0, 0, 0) 59.01639%, rgba(121, 121, 229, 0.25) 59.01639%, rgba(79, 79, 221, 0.25) 65.57377%, rgba(0, 0, 0, 0) 65.57377%, rgba(0, 0, 0, 0) 67.21311%, rgba(121, 121, 229, 0.25) 67.21311%, rgba(79, 79, 221, 0.25) 73.77049%, rgba(0, 0, 0, 0) 73.77049%, rgba(0, 0, 0, 0) 75.40984%, rgba(121, 121, 229, 0.25) 75.40984%, rgba(79, 79, 221, 0.25) 81.96721%, rgba(0, 0, 0, 0) 81.96721%, rgba(0, 0, 0, 0) 83.60656%, rgba(121, 121, 229, 0.25) 83.60656%, rgba(79, 79, 221, 0.25) 90.16393%, rgba(0, 0, 0, 0) 90.16393%, rgba(0, 0, 0, 0) 91.80328%, rgba(121, 121, 229, 0.25) 91.80328%, rgba(79, 79, 221, 0.25) 98.36066%, rgba(0, 0, 0, 0) 98.36066%, rgba(0, 0, 0, 0) 100%);
+  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 1.63934%, rgba(121, 121, 229, 0.25) 1.63934%, rgba(79, 79, 221, 0.25) 8.19672%, rgba(0, 0, 0, 0) 8.19672%, rgba(0, 0, 0, 0) 9.83607%, rgba(121, 121, 229, 0.25) 9.83607%, rgba(79, 79, 221, 0.25) 16.39344%, rgba(0, 0, 0, 0) 16.39344%, rgba(0, 0, 0, 0) 18.03279%, rgba(121, 121, 229, 0.25) 18.03279%, rgba(79, 79, 221, 0.25) 24.59016%, rgba(0, 0, 0, 0) 24.59016%, rgba(0, 0, 0, 0) 26.22951%, rgba(121, 121, 229, 0.25) 26.22951%, rgba(79, 79, 221, 0.25) 32.78689%, rgba(0, 0, 0, 0) 32.78689%, rgba(0, 0, 0, 0) 34.42623%, rgba(121, 121, 229, 0.25) 34.42623%, rgba(79, 79, 221, 0.25) 40.98361%, rgba(0, 0, 0, 0) 40.98361%, rgba(0, 0, 0, 0) 42.62295%, rgba(121, 121, 229, 0.25) 42.62295%, rgba(79, 79, 221, 0.25) 49.18033%, rgba(0, 0, 0, 0) 49.18033%, rgba(0, 0, 0, 0) 50.81967%, rgba(121, 121, 229, 0.25) 50.81967%, rgba(79, 79, 221, 0.25) 57.37705%, rgba(0, 0, 0, 0) 57.37705%, rgba(0, 0, 0, 0) 59.01639%, rgba(121, 121, 229, 0.25) 59.01639%, rgba(79, 79, 221, 0.25) 65.57377%, rgba(0, 0, 0, 0) 65.57377%, rgba(0, 0, 0, 0) 67.21311%, rgba(121, 121, 229, 0.25) 67.21311%, rgba(79, 79, 221, 0.25) 73.77049%, rgba(0, 0, 0, 0) 73.77049%, rgba(0, 0, 0, 0) 75.40984%, rgba(121, 121, 229, 0.25) 75.40984%, rgba(79, 79, 221, 0.25) 81.96721%, rgba(0, 0, 0, 0) 81.96721%, rgba(0, 0, 0, 0) 83.60656%, rgba(121, 121, 229, 0.25) 83.60656%, rgba(79, 79, 221, 0.25) 90.16393%, rgba(0, 0, 0, 0) 90.16393%, rgba(0, 0, 0, 0) 91.80328%, rgba(121, 121, 229, 0.25) 91.80328%, rgba(79, 79, 221, 0.25) 98.36066%, rgba(0, 0, 0, 0) 98.36066%, rgba(0, 0, 0, 0) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 1.63934%, rgba(121, 121, 229, 0.25) 1.63934%, rgba(79, 79, 221, 0.25) 8.19672%, rgba(0, 0, 0, 0) 8.19672%, rgba(0, 0, 0, 0) 9.83607%, rgba(121, 121, 229, 0.25) 9.83607%, rgba(79, 79, 221, 0.25) 16.39344%, rgba(0, 0, 0, 0) 16.39344%, rgba(0, 0, 0, 0) 18.03279%, rgba(121, 121, 229, 0.25) 18.03279%, rgba(79, 79, 221, 0.25) 24.59016%, rgba(0, 0, 0, 0) 24.59016%, rgba(0, 0, 0, 0) 26.22951%, rgba(121, 121, 229, 0.25) 26.22951%, rgba(79, 79, 221, 0.25) 32.78689%, rgba(0, 0, 0, 0) 32.78689%, rgba(0, 0, 0, 0) 34.42623%, rgba(121, 121, 229, 0.25) 34.42623%, rgba(79, 79, 221, 0.25) 40.98361%, rgba(0, 0, 0, 0) 40.98361%, rgba(0, 0, 0, 0) 42.62295%, rgba(121, 121, 229, 0.25) 42.62295%, rgba(79, 79, 221, 0.25) 49.18033%, rgba(0, 0, 0, 0) 49.18033%, rgba(0, 0, 0, 0) 50.81967%, rgba(121, 121, 229, 0.25) 50.81967%, rgba(79, 79, 221, 0.25) 57.37705%, rgba(0, 0, 0, 0) 57.37705%, rgba(0, 0, 0, 0) 59.01639%, rgba(121, 121, 229, 0.25) 59.01639%, rgba(79, 79, 221, 0.25) 65.57377%, rgba(0, 0, 0, 0) 65.57377%, rgba(0, 0, 0, 0) 67.21311%, rgba(121, 121, 229, 0.25) 67.21311%, rgba(79, 79, 221, 0.25) 73.77049%, rgba(0, 0, 0, 0) 73.77049%, rgba(0, 0, 0, 0) 75.40984%, rgba(121, 121, 229, 0.25) 75.40984%, rgba(79, 79, 221, 0.25) 81.96721%, rgba(0, 0, 0, 0) 81.96721%, rgba(0, 0, 0, 0) 83.60656%, rgba(121, 121, 229, 0.25) 83.60656%, rgba(79, 79, 221, 0.25) 90.16393%, rgba(0, 0, 0, 0) 90.16393%, rgba(0, 0, 0, 0) 91.80328%, rgba(121, 121, 229, 0.25) 91.80328%, rgba(79, 79, 221, 0.25) 98.36066%, rgba(0, 0, 0, 0) 98.36066%, rgba(0, 0, 0, 0) 100%);
+  background-position: left top;
+}
+/* line 38, ../../../../../.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
