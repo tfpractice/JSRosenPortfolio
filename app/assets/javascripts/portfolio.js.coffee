@@ -29,7 +29,8 @@ $(document).ready ->
     # ]
     ###
     ###
-    slidesNavigation: true
+    slidesNavigation: ".categoryList"
+
     slidesNavPosition: "bottom"
     
     #Scrolling
@@ -60,7 +61,7 @@ $(document).ready ->
       "#ffffea"
       "#ffffea"
       "#ffffea"
-    ]
+    ]   
     paddingTop: "none"
     paddingBottom: "3em"
     fixedElements: ".footer"

@@ -8,6 +8,7 @@
 .sectionContainer{
 			@include columns(16);
 			margin-left: columns(5);
+			//background: #ff00ff;
 
 
 }
@@ -26,7 +27,7 @@
 }
 
 
-.projectList{
+.categoryList{
 	float: right;
 }
 
@@ -41,7 +42,7 @@
     top: 5%;
     opacity: 1;
 }
-.projectList{
+.categoryList{
 	display: inline-flex;
 	float: right;
 	margin: 1em;
@@ -56,3 +57,24 @@ li{
 		margin-top: 2em;
 	}
 }
+
+.projectList{
+	@include columns(4);
+	float: right;
+
+}
+.imageContainer{
+	@include columns(16);
+
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,10 +1,12 @@
 
 
 	<div class="section" data-anchor="top" >
+				<%= image_tag("site_bg_0.jpg")%>
+
+<%#= video_tag("Love OutofBounds-SD.mp4", controls: false, muted: true, autoplay: true) %>
 
 <div class "sectionContainer">
-		<%= image_tag("site_bg_0.jpg")%>
-
+		
 	</div>
 		
 	</div>
@@ -12,6 +14,18 @@
 	<div class="section" data-anchor="about" >
 <div class = "sectionContainer">
 		<h1>about</h1>
+		<p>Ebullient, frothy, gold dipped.
+
+Jason Scott Rosen is an experience designer, concept assembler, and artist. Though he has lived in many places, he considers Austin, Texas and New York, New York home. 
+
+He has performed as an art director, content and identity strategist, executive director, events producer for individuals, organizations, and corporations of every scale.
+
+Desiring the crossflow between emergent technologies with material and visual cultures, he presently is pursuing a Masters as a Researcher at NYU's Interactive Telecommunications Program. 
+
+He loves cycling, architectural history and theory, dancing, and believing in a better tomorrow through partnerships with loved ones, both known and yet to be discovered.
+
+Reach out and say hello.
+</p>
 </div>
 
 	</div>
@@ -19,7 +33,7 @@
 
 	<div class="section" data-anchor="projects">
 
-			<ul class = "projectList fp-slidesNav" id ="homeProjectList">
+			<ul class = "categoryList fp-slidesNav" id ="homeProjectList">
 					<% @categories.each do |category| %>
 					<li class = "menuItem"> <a href = #> <%=category.name.upcase%> </a> </li>
 					<% end %>
