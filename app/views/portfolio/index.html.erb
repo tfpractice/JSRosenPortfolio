@@ -34,15 +34,17 @@ Reach out and say hello.
 	<div class="section" data-anchor="projects">
 
 			<ul class = "categoryList fp-slidesNav" id ="homeProjectList">
-					<% @categories.each do |category| %>
+					<% @categories.visible.each do |category| %>
 					<li class = "menuItem"> <a href = #> <%=category.name.upcase%> </a> </li>
 					<% end %>
 				</ul>
 				
-				<% @categories.each do |category| %>
+				<% @categories.visible.each do |category| %>
+				<% @category = category %>
+
 				<div class="slide" data-anchor="slide<%=category.id%>" >
 		
-							<%= render "categories" %>
+							<%= render "categories", object: category %>
 				</div>
 							<% end %>
 		

@@ -1,16 +1,17 @@
+<% category = @category %>
+
 		<div class = "sectionContainer ">
-			<h1>Category name </h1>
-			<p>CategoryDescription</p>
+			<h1><%= category.name %></h1>
+			<p><%= category.description %></p>
 
 			
 			 <div class = "imageContainer">
-			 	<p>this is a picture</p>
 			 				 	<%= image_tag("logo_large_brown.svg") %>
 
 			 </div>
 
 			 <ul class = "projectList">
-			 	<% @projects.each do |project|%>
+			 	<% category.projects.visible.each do |project|%>
 			 	<li><p><%= project.title %></p></li>
 			 	<%end%>
 			</ul>

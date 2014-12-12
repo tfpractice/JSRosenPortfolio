@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141210011504) do
+ActiveRecord::Schema.define(version: 20141211234523) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,12 +25,39 @@ ActiveRecord::Schema.define(version: 20141210011504) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "visible"
   end
 
   create_table "categories_projects", id: false, force: true do |t|
     t.integer "category_id", null: false
     t.integer "project_id",  null: false
   end
+
+  create_table "category_images", force: true do |t|
+    t.integer  "category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "name"
+  end
+
+  add_index "category_images", ["category_id"], name: "index_category_images_on_category_id", using: :btree
+
+  create_table "project_images", force: true do |t|
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "name"
+  end
+
+  add_index "project_images", ["project_id"], name: "index_project_images_on_project_id", using: :btree
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -42,6 +69,7 @@ ActiveRecord::Schema.define(version: 20141210011504) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.boolean  "visible"
   end
 
   create_table "samples", force: true do |t|
