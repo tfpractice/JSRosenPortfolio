@@ -68,8 +68,41 @@ li{
 
 }
 
+#slides1_container{ 
+position: relative;
+top: 0px;
+left: 0px;
+width: 600px;
+height: 300px;
+	.jssorSlide{
 
+// width: columns(10);
+width: 700px;
+height: 300px;
 
+cursor: move; 
+position: absolute;
+ overflow: hidden; 
+ left: 0px; 
+ top: 0px; 
+ width: 600px; 
+ height: 300px;
+	}
+
+.projectImageContainer{
+	img{
+	//	max-height: 600px;
+		position:absolute;
+    top:50%;
+    min-height:100%;
+    display:block;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    //min-width:100%;
+	}
+}
+
+}
 
 
 

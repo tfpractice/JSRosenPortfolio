@@ -3,7 +3,13 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   #$("#menu").scrollToFixed()
-  
+  options =
+    $AutoPlay: true
+   # $SlideWidth: "300px"
+   # $SlideHeight: "300px"
+
+  jssor_slider1 = new $JssorSlider$("slider1_container", options)
+
   $("#fullpage").fullpage
     
     #Navigation
