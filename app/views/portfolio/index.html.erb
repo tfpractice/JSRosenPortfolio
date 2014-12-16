@@ -1,19 +1,17 @@
 
 
-	<div class="section" data-anchor="top" >
-				<%= image_tag("site_bg_0.jpg")%>
+	<div class="section" id = "topSection" data-anchor="top" >
+				<%# image_tag("site_bg_0.jpg")%>
 
-<%#= video_tag("Love OutofBounds-SD.mp4", controls: false, muted: true, autoplay: true) %>
+<!-- <div class "sectionContainer"> -->
+	<div id = "topContainer"> 
 
-<div class "sectionContainer">
-		
-	</div>
-		
-	</div>
+		<!-- <video autoplay loop muted controls ="false" id ="bgVid" src = "images/Love OutofBounds-SD.mp4"> -->
+<!-- <source src="assets/images/Love OutofBounds-SD.mp4" type="video/mp4"> -->
+<%= video_tag("Love OutofBounds-SD.mp4", autoplay:true, controls: false, muted: true, autobuffer: true, id: "bgVid", :loop => true) %>
 
-	<div class="section" data-anchor="about" >
-<div class = "sectionContainer">
-		<h1>about</h1>
+<!-- </video> --><div class = "videoOverlay">
+<h1>about</h1>
 		<p>Ebullient, frothy, gold dipped.
 
 Jason Scott Rosen is an experience designer, concept assembler, and artist. Though he has lived in many places, he considers Austin, Texas and New York, New York home. 
@@ -27,8 +25,21 @@ He loves cycling, architectural history and theory, dancing, and believing in a 
 Reach out and say hello.
 </p>
 </div>
+</div>
+				<!-- </div> -->
 
+<%#= video_tag("Love OutofBounds-SD.mp4", controls: false, muted: true, autoplay: true) %>
+
+
+		
 	</div>
+
+	<!-- <div class="section" data-anchor="about" >
+<div class = "sectionContainer">
+		
+</div>
+
+	</div> -->
 	
 
 	<div class="section" data-anchor="projects">
@@ -54,7 +65,45 @@ Reach out and say hello.
 	<div class="section" id ="Résumé/CV" data-anchor="resume" >
 		<div class = "sectionContainer">
 			<h1>Résumé/CV</h1>
-			<%= image_tag("JSRosenResume.jpg", height: "600px") %>
+			<div class = "resumeDiv" id = "primaryExperienceDiv">
+				<% @experiences.primary.each do |experience | %>
+				<div class = "experienceDiv"> 
+					<h1> <%= experience.employer + "-" %> <%= experience.position %> </h1> 
+					<h2> <%= experience.location%> <%=experience.start %> <%= experience.end %> </h2>
+					<p> <%= experience.description %> </p>
+
+				</div>
+				<%end%>
+			</div>
+			<div class = "resumeDiv" id = "secondaryResumeDiv" >
+				<div id = "educationDiv ">
+					<% @educations.each do |education| %>
+					<h1> <%= education.institution %> <%= education.graduation %> </h1>
+					<% education.programs.each do |program| %>
+					<h1> <%= program.name%> </h1>
+ 					<%end%>
+
+					<%end%>
+				</div>
+				<div id = "skillsDiv">
+					<%= @skills.each do |skill|%>
+					<p> skill.name</p>
+					<% end %>
+				 </div>
+
+				 <div id = "secondaryExperienceDiv ">
+				 	<% @experiences.secondary.each do |experience| %>
+				 	<div class = "experienceDiv"> 
+					<h1> <%= experience.employer + "-" %> <%= experience.position %> </h1> 
+					<h2> <%= experience.location%> <%=experience.start %> <%= experience.end %> </h2>
+					<p> <%= experience.description %> </p>
+
+				</div>
+
+				 	<%end%>
+				 </div>
+			</div>
+			<%#= image_tag("JSRosenResume.jpg", height: "600px") %>
 		</div>
 	</div>
 

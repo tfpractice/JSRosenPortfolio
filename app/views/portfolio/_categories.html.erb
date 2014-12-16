@@ -6,22 +6,27 @@
 
 			
 			 <div class = "imageContainer">
-					 	<div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
-					 	<!-- <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;"> -->
+
+			 	<div class = "flexSlider">
 		    <!-- Slides Container -->
-		    <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 600px;">
+		    		      			 	<% category.projects.visible.each do |project|%>
+		    		      			 	<%#= link_to "link text...", project_path(@project) %>
+
+		    <ul class = "slides">
+		    <!-- <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 600px;"> -->
 		    <!-- <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;"> -->
 		    							  <!-- <div><img u="image" src="image1.jpg" /></div> -->
 
-		      			 	<% category.projects.visible.each do |project|%>
 		      			 	<%# @project = project %>
 		      			 	<% project.project_images.each do |metaImage|%>
-		        	<div class = "projectImageContainer"><%= image_tag metaImage.image.url %></div>
+		        	<li class = "projectImageContainer"><%= image_tag metaImage.image.url %></li>
 <!-- 		        <div><img u="image" src="image2.jpg" /></div>
  -->		        <%end%>
- 			        <%end%>
 
-		    </div>
+		    <!-- </div> -->
+		    </ul>
+		     			        <%end%>
+
 				</div>
 			 				 	<%#= image_tag("logo_large_brown.svg", u: "image") %>
 

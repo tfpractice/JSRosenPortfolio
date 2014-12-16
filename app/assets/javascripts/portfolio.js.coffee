@@ -3,12 +3,18 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
   #$("#menu").scrollToFixed()
-  options =
-    $AutoPlay: true
+  #options =
+  #  $AutoPlay: true
    # $SlideWidth: "300px"
    # $SlideHeight: "300px"
 
-  jssor_slider1 = new $JssorSlider$("slider1_container", options)
+  #jssor_slider1 = new $JssorSlider$("slider1_container", options)
+
+  $(".flexSlider").flexslider
+    selector: ".slides > li",
+    animation: "fade",
+    controlNav: true,
+    directionNav: true 
 
   $("#fullpage").fullpage
     
@@ -19,7 +25,7 @@ $(document).ready ->
 
     anchors: [
       "top"
-      "about"
+     # "about"
       "projects"
       "resume"
     ]

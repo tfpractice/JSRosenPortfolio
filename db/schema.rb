@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211234523) do
+ActiveRecord::Schema.define(version: 20141213040238) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -46,6 +46,43 @@ ActiveRecord::Schema.define(version: 20141211234523) do
 
   add_index "category_images", ["category_id"], name: "index_category_images_on_category_id", using: :btree
 
+  create_table "contacts", force: true do |t|
+    t.string   "name"
+    t.string   "phone"
+    t.string   "email"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "educations", force: true do |t|
+    t.string   "institution"
+    t.date     "graduation"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "experiences", force: true do |t|
+    t.string   "employer"
+    t.string   "position"
+    t.date     "start"
+    t.date     "end"
+    t.boolean  "current"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "primary"
+    t.string   "location"
+  end
+
+  create_table "programs", force: true do |t|
+    t.string   "name"
+    t.integer  "education_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "programs", ["education_id"], name: "index_programs_on_education_id", using: :btree
+
   create_table "project_images", force: true do |t|
     t.integer  "project_id"
     t.datetime "created_at"
@@ -75,6 +112,12 @@ ActiveRecord::Schema.define(version: 20141211234523) do
   create_table "samples", force: true do |t|
     t.string   "title"
     t.text     "blurb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "skills", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

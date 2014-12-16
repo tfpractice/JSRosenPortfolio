@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  institiution: MyString
+  graduation: 2014-12-12
+
+two:
+  institiution: MyString
+  graduation: 2014-12-12
