@@ -1,0 +1,9 @@
+<% project = @project %>
+
+ <ul class = "slides">
+		   
+		      			 	<% project.project_images.each do |metaImage|%>
+		        	<li class = "projectImageContainer"><%= image_tag metaImage.image.url %></li>
+		        <%end%>
+
+		    </ul>

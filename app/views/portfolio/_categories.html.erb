@@ -9,32 +9,27 @@
 
 			 	<div class = "flexSlider">
 		    <!-- Slides Container -->
-		    		      			 	<% category.projects.visible.each do |project|%>
-		    		      			 	<%#= link_to "link text...", project_path(@project) %>
+		    		      			 	<% category.projects.initial.each do |project|%>
+		    		      			 	
 
 		    <ul class = "slides">
-		    <!-- <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 600px;"> -->
-		    <!-- <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px;"> -->
-		    							  <!-- <div><img u="image" src="image1.jpg" /></div> -->
-
-		      			 	<%# @project = project %>
+		   <%#= project.title %>
 		      			 	<% project.project_images.each do |metaImage|%>
 		        	<li class = "projectImageContainer"><%= image_tag metaImage.image.url %></li>
-<!-- 		        <div><img u="image" src="image2.jpg" /></div>
- -->		        <%end%>
+		        <%end%>
 
-		    <!-- </div> -->
 		    </ul>
 		     			        <%end%>
 
 				</div>
-			 				 	<%#= image_tag("logo_large_brown.svg", u: "image") %>
 
 			 </div>
 
 			 <ul class = "projectList">
 			 	<% category.projects.visible.each do |project|%>
-			 	<li><p><%= project.title %></p></li>
+			 	<% @project = project %>
+<li>		    	<%= link_to "#{project.title}", project_path(@project, format: :js), remote: true %>
+			 	</li>			 	
 			 	<%end%>
 			</ul>
 

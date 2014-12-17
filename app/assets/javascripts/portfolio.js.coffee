@@ -20,6 +20,8 @@ $(document).ready ->
     
     #Navigation
     ###
+    ###
+    ###
     menu: false
     ###
 

@@ -2,6 +2,12 @@ Rails.application.routes.draw do
   get 'portfolio/index'
 
   get 'portfolio/show'
+  get '/projects/:id', to: 'portfolio#show'
+
+
+  # namespace :portfolio do
+  #  resources :projects, :categories
+  # end
 
   namespace :admin do
     resources :categories
@@ -14,7 +20,8 @@ Rails.application.routes.draw do
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   root 'portfolio#index'
-  resources :samples
+  resources :projects, :categories
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141213040238) do
+ActiveRecord::Schema.define(version: 20141217015126) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -74,6 +74,18 @@ ActiveRecord::Schema.define(version: 20141213040238) do
     t.string   "location"
   end
 
+  create_table "goodproject_videos", force: true do |t|
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
+  end
+
+  add_index "goodproject_videos", ["project_id"], name: "index_goodproject_videos_on_project_id", using: :btree
+
   create_table "programs", force: true do |t|
     t.string   "name"
     t.integer  "education_id"
@@ -96,6 +108,18 @@ ActiveRecord::Schema.define(version: 20141213040238) do
 
   add_index "project_images", ["project_id"], name: "index_project_images_on_project_id", using: :btree
 
+  create_table "project_videos", force: true do |t|
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "video_file_name"
+    t.string   "video_content_type"
+    t.integer  "video_file_size"
+    t.datetime "video_updated_at"
+  end
+
+  add_index "project_videos", ["project_id"], name: "index_project_videos_on_project_id", using: :btree
+
   create_table "projects", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -107,6 +131,7 @@ ActiveRecord::Schema.define(version: 20141213040238) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.boolean  "visible"
+    t.boolean  "initial"
   end
 
   create_table "samples", force: true do |t|

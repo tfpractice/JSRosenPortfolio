@@ -1,0 +1,16 @@
+$( document ).ready(function() {
+
+
+$(".slides").html("<%= j (render(partial: 'portfolio/project')) %>");
+
+$('.flexslider').flexslider({
+ 	animation: "fade",
+ 	smoothHeight: true
+ });
+
+
+
+
+$(window).resize();
+});
+
