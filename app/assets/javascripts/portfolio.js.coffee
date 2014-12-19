@@ -7,6 +7,7 @@ $(document).ready ->
   #  $AutoPlay: true
    # $SlideWidth: "300px"
    # $SlideHeight: "300px"
+  # $('.videoOverlay').slideUp()
 
   #jssor_slider1 = new $JssorSlider$("slider1_container", options)
 
@@ -14,8 +15,9 @@ $(document).ready ->
     selector: ".slides > li",
     animation: "fade",
     controlNav: true,
-    directionNav: true 
-
+    directionNav: false 
+   # controlsContainer: ".slides"
+  # $('#bgVid').setAttribute "autoplay", true
   $("#fullpage").fullpage
     
     #Navigation
@@ -43,7 +45,7 @@ $(document).ready ->
     # ]
     ###
     ###
-    slidesNavigation: ".categoryList"
+    slidesNavigation: false
 
     slidesNavPosition: "bottom"
     
@@ -99,3 +101,4 @@ $(document).ready ->
     onSlideLeave: (anchorLink, index, slideIndex, direction) ->
 
   
+    # $('#bgVid').play()

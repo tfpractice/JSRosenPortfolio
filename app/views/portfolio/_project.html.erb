@@ -1,9 +1,46 @@
 <% project = @project %>
 
- <ul class = "slides">
+ <!-- <ul class = "slides"> -->
 		   
-		      			 	<% project.project_images.each do |metaImage|%>
-		        	<li class = "projectImageContainer"><%= image_tag metaImage.image.url %></li>
+
+		    <!-- </ul> -->
+<!--  -->
+		    <div class = "sectionContainer ">
+			<h1><%= project.title %></h1>
+<!-- 			<p><%= project.description %></p>
+ -->
+			
+			 <div class = "imageContainer">
+
+			 	<div class = "flexSlider">
+		    <!-- Slides Container -->
+		    		      			 	
+
+		    <ul class = "slides">
+		    		<% project.project_images.each do |image|%>
+
+		        	<li class = "projectImageContainer"><%= image_tag image.image.url %></li>
 		        <%end%>
 
 		    </ul>
+		     			        <%#end%>
+
+				</div>
+				<div class = "projectVideos">
+					<% project.goodproject_videos.each do |video| %>
+					<%= video_tag "#{video.name}", video.video.url %>
+					<% end %>
+				</div>
+			 </div>
+
+			 <div class = "projectDescription">
+			 	<p><%= project.description %></p>
+			 			 	
+			 			 	<%# category.projects.visible.each do |project|%>
+			 			 	<%# @project = project %>
+			 			 	
+			 			 	<%#end%>
+			 </div>
+
+
+			</div>
