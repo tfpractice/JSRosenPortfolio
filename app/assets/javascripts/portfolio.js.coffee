@@ -45,7 +45,7 @@ $(document).ready ->
     # ]
     ###
     ###
-    slidesNavigation: false
+    slidesNavigation: true
 
     slidesNavPosition: "bottom"
     

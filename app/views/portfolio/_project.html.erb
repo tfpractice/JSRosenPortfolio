@@ -26,11 +26,7 @@
 		     			        <%#end%>
 
 				</div>
-				<div class = "projectVideos">
-					<% project.goodproject_videos.each do |video| %>
-					<%= video_tag "#{video.name}", video.video.url %>
-					<% end %>
-				</div>
+
 			 </div>
 
 			 <div class = "projectDescription">
@@ -41,6 +37,10 @@
 			 			 	
 			 			 	<%#end%>
 			 </div>
-
+				<div class = "videoContainer">
+					<% project.goodproject_videos.each do |video| %>
+					<%= video_tag "#{video.name}", video.video.url %>
+					<% end %>
+				</div>
 
 			</div>

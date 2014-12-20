@@ -47,6 +47,9 @@ gem 'rails_stdout_logging'
 
 gem 'sprockets', '2.11.0'
 gem 'breakpoint', '~> 2.5.0'
+#gem 'ffmpeg-ruby'
+gem 'paperclip-av-transcoder'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

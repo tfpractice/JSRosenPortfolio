@@ -9,7 +9,10 @@
 }
 .section{ 
 .sectionContainer{
-			@include columns(16);
+			// @include columns(4);
+			// @include susy-grid-background;
+			width: columns(19);
+
 			margin-left: columns(5); 
 
 
@@ -35,6 +38,16 @@
 
 #menu{
 	@include columns(4);
+	.projectList{
+	// display: inline-flex;
+	float: left;
+	margin: 1em;
+	// bottom: 0px;
+//left: 0px;
+	.menuItem{
+		margin: 1em;
+	}
+}
 }
 
 #fp-nav {
@@ -48,16 +61,7 @@ vertical-align: baseline;
 
     opacity: 1;
 }
-.projectList{
-	display: inline-flex;
-	float: left;
-	margin: 1em;
-	bottom: 0px;
-//left: 0px;
-	.menuItem{
-		margin: 1em;
-	}
-}
+
 
 .menuItem{
 	img{
@@ -70,18 +74,20 @@ vertical-align: baseline;
 	@include columns(10);
 	float: right;
 	border-left: 1px solid #b8b18c;
-padding-left: 1em;
+	padding-left: 1em;
 
 }
 .imageContainer{
-	@include columns(16);
+	@include columns(12);
+	// width: columns(8);
 
 }                   
 
 .projectImageContainer{
 	img{
-		max-height: 30rem;
-		max-width: 30rem;
+		// max-height: 30em;
+		// width: columns
+		max-width: 100%;
 		position:absolute;      
 	}
 
@@ -134,5 +140,11 @@ height: 100%;
 
 }
 
+.videoContainer{
+	max-width: columns(17);
+	video{
+		max-width: 100%;
+	}
+}
 
 
