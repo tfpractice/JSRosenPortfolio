@@ -2,6 +2,8 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+  $(".aboutText").hide()
+
   #$("#menu").scrollToFixed()
   #options =
   #  $AutoPlay: true
@@ -10,13 +12,27 @@ $(document).ready ->
   # $('.videoOverlay').slideUp()
 
   #jssor_slider1 = new $JssorSlider$("slider1_container", options)
+  $(".projectDescription").slimScroll
+    color: "#a54222",
+    railVisible: true,
+    # alwaysVisible: true,
+    # allowPageScroll: true,
+    height: "20em"
+
+
+  $("#resumeContainer").slimScroll
+    height: "760px"
+
+
+    # width: "40%"
+
 
   $(".flexSlider").flexslider
     selector: ".slides > li",
     animation: "fade",
     controlNav: true,
     directionNav: false 
-   # controlsContainer: ".slides"
+    # controlsContainer: ".imageContainer"
   # $('#bgVid').setAttribute "autoplay", true
   $("#fullpage").fullpage
     
@@ -59,8 +75,8 @@ $(document).ready ->
     loopBottom: true
     loopTop: false
     loopHorizontal: true
-    continuousVertical: true
-    normalScrollElements: "#element1, .element2"
+    continuousVertical: false
+    normalScrollElements: "#resumeContainer, .projectDescription"
     scrollOverflow: false
     touchSensitivity: 15
     normalScrollElementTouchThreshold: 5
@@ -92,13 +108,33 @@ $(document).ready ->
 
     afterLoad: (anchorLink, index) ->
 
-    afterRender: ->
+    afterRender: -> 
+     $(".aboutText").slideDown("slow", "swing")
+     $("#bgVid")[0].play() 
+
+   
 
     afterResize: ->
+    #$("#bgVideo")[0].play()
 
     afterSlideLoad: (anchorLink, index, slideAnchor, slideIndex) ->
 
     onSlideLeave: (anchorLink, index, slideIndex, direction) ->
 
-  
-    # $('#bgVid').play()
+  #$("#bgVid").load 
+ # $("#bgVid").autoplay = true  
+  $("#homeProjectList").removeClass("bottom")
+  $("#fp-nav").css("margin-top","0px")
+  $(".right").css("margin-left","")
+  $(".fp-slidesNav").css("left","")
+  $(".right").css("right","0px")
+  $(".projectDescription").css("width", "")
+  $(".slimScrollDiv").css("width","")
+  $(".projectDescription").perfectScrollbar
+    suppressScrollX: true
+
+
+  # $("#bgVid").setAttribute "autoplay", true
+
+
+  # $('#bgVid').setAttribute "autoplay", true

@@ -8,22 +8,23 @@
 
 		<!-- <video autoplay loop muted controls ="false" id ="bgVid" src = "images/Love OutofBounds-SD.mp4"> -->
 <!-- <source src="assets/images/Love OutofBounds-SD.mp4" type="video/mp4"> -->
-<%= video_tag("Love OutofBounds-SD.mp4", autoplay:true, controls: false, muted: true, autobuffer: true, id: "bgVid", :loop => true) %>
+<%= video_tag("overcast.mp4", autoplay:true, controls: false, muted: true, autobuffer: true, id: "bgVid", :loop => true) %>
 
 <!-- </video> --><div class = "videoOverlay">
-<h1>about</h1>
-		<p>Ebullient, frothy, gold dipped.
-
-Jason Scott Rosen is an experience designer, concept assembler, and artist. Though he has lived in many places, he considers Austin, Texas and New York, New York home. 
-
-He has performed as an art director, content and identity strategist, executive director, events producer for individuals, organizations, and corporations of every scale.
-
-Desiring the crossflow between emergent technologies with material and visual cultures, he presently is pursuing a Masters as a Researcher at NYU's Interactive Telecommunications Program. 
-
-He loves cycling, architectural history and theory, dancing, and believing in a better tomorrow through partnerships with loved ones, both known and yet to be discovered.
-
-Reach out and say hello.
-</p>
+<span class = "topHeader"> <h1>about  </h1>  </span>
+	<span class = "aboutText">	<p>Ebullient, frothy, gold dipped.
+	
+	Jason Scott Rosen is an experience designer, concept assembler, and artist. Though he has lived in many places, he considers Austin, Texas and New York, New York home. 
+	
+	He has performed as an art director, content and identity strategist, executive director, events producer for individuals, organizations, and corporations of every scale.
+	
+	Desiring the crossflow between emergent technologies with material and visual cultures, he presently is pursuing a Masters as a Researcher at NYU's Interactive Telecommunications Program. 
+	
+	He loves cycling, architectural history and theory, dancing, and believing in a better tomorrow through partnerships with loved ones, both known and yet to be discovered.
+	
+	Reach out and say hello.
+	</p></span>
+	<span class ="topFooter">  <a class= "topLink" href="http://instagram.com/goldencalf" target ="_blank"> Instagram  </a> <a href="https://www.linkedin.com/pub/jason-rosen/23/b64/182" target ="_blank" > LinkedIn</a>   </span>
 </div>
 </div>
 				<!-- </div> -->
@@ -44,7 +45,7 @@ Reach out and say hello.
 
 	<div class="section" data-anchor="projects">
 
-			<ul class = "projectList fp-slidesNav" id ="homeProjectList">
+			<ul class = "projectList fp-slidesNav right" id ="homeProjectList">
 					<% @projects.visible.each do |project| %>
 					<li class = "menuItem"> <a href = #> <%=project.title.upcase%> </a> </li>
 					<% end %>
@@ -63,48 +64,70 @@ Reach out and say hello.
 
 
 	<div class="section" id ="Résumé/CV" data-anchor="resume" >
-		<div class = "sectionContainer">
-			<h1>Résumé/CV</h1>
-			<div class = "resumeDiv" id = "primaryExperienceDiv">
-				<% @experiences.primary.each do |experience | %>
-				<div class = "experienceDiv"> 
-					<h1> <%= experience.employer + "-" %> <%= experience.position %> </h1> 
-					<h2> <%= experience.location%> <%=experience.start.to_s %> <%= experience.end.to_s %> </h2>
-					<p> <%= experience.description %> </p>
 
-				</div>
-				<%end%>
+		<div class = "sectionContainer" id = "resumeContainer">
+<!-- 			<h1>Résumé/CV</h1>
+ -->			<div class = "resumeDiv" id = "primaryExperienceDiv">
+				<h1> Primary Experience</h1>
+				<ul id = "primaryExperienceList">
+					<% @experiences.primary.each do |experience | %>
+								<l1>
+									<div class = "experienceDiv"> 
+																	<h2> <%= experience.employer + "-" %> <%= experience.position %> </h1> 
+																	<h2> <%= experience.location%> <%=experience.start.to_s %> <%= experience.end.to_s %> </h2>
+																	<p> <%= experience.description %> </p>
+												
+									</div>
+								</l1>
+								<%end%>
+
+							</ul>
 			</div>
 			<div class = "resumeDiv" id = "secondaryResumeDiv" >
 				<div id = "educationDiv ">
+					<ul class = "educationList">
+						<h1> Education</h1>
 					<% @educations.each do |education| %>
-					<h1> <%= education.institution %> <%= education.graduation.to_s %> </h1>
-					<% education.programs.each do |program| %>
-					<h1> <%= program.name%> </h1>
- 					<%end%>
+<li>					<h2> <%= education.institution %> <%= education.graduation.to_s %> </h2>
+					</li><ul>					
+										<% education.programs.each do |program| %>
+					<li>					 <%= program.name%> 
+					 					</li> 					<%end%></ul>
 
 					<%end%>
+				</ul>
 				</div>
-				<div id = "skillsDiv">
-					<%= @skills.each do |skill|%>
-					<p> skill.name</p>
-					<% end %>
-				 </div>
+				<div class = "skillsWrapper">
+														<h1> Skills </h1>
+
+					<div id = "skillsDiv">
+									<% @skills.find_in_batches(start: 0, batch_size: 9) do |group|%>
+									<div class = "skillsBatch">
+										<% group.each do |skill| %>
+														<p> <%= skill.name %> </p>
+										<% end %>
+									</div>
+									<% end %>
+								 </div></div>
 
 				 <div id = "secondaryExperienceDiv ">
-				 	<% @experiences.secondary.each do |experience| %>
-				 	<div class = "experienceDiv"> 
-					<h1> <%= experience.employer + "-" %> <%= experience.position %> </h1> 
-					<h2> <%= experience.location%> <%=experience.start.to_s %> <%= experience.end.to_s %> </h2>
-					<p> <%= experience.description %> </p>
+				 					<h1> Other Experience</h1>
 
-				</div>
-
-				 	<%end%>
-				 </div>
+				 	<ul id = "secondaryExperienceList">
+				 		<% @experiences.secondary.each do |experience| %>
+				 					 	<li>
+				 					 		<div class = "experienceDiv"> 
+				 					 					 						<h2> <%= experience.employer + "-" %> <%= experience.position %> </h2> 
+				 					 					 						<h2> <%= experience.location%> <%=experience.start.to_s %> <%= experience.end.to_s %> </h2>
+				 					 					 						<p> <%= experience.description %> </p>
+				 					 					 	
+				 					 					 					</div></li>
+				 	
+				 					 	<%end%>
+				 					 </ul>
+				 </div>	
 			</div>
-			<%#= image_tag("JSRosenResume.jpg", height: "600px") %>
-		</div>
+					</div>
 	</div>
 
 
