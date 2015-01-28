@@ -21,7 +21,7 @@ $(document).ready ->
 
 
   $("#resumeContainer").slimScroll
-    height: "760px"
+    height: "500px"
 
 
     # width: "40%"
@@ -110,7 +110,7 @@ $(document).ready ->
 
     afterRender: -> 
      $(".aboutText").slideDown("slow", "swing")
-     $("#bgVid")[0].play() 
+     #$("#bgVid")[0].play() 
 
    
 

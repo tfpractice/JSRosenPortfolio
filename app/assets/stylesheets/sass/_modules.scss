@@ -12,7 +12,18 @@ h2{
 			color: #000000;
 	}
 
+#topContainer{
+
+}
+
 #topSection{
+
+background-image: image-url("site_bg_1.jpg");
+	background-size:	cover,cover;
+	background-repeat: no-repeat;
+	//background-position:  bottom center, bottom center;
+
+	
 	.topHeader{
 			 	border-bottom: 1px solid #b8b18c;
 
