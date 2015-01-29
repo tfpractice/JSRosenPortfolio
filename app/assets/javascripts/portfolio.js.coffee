@@ -2,6 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+
+  wHeight = $(window).height()
+  wHString = wHeight + "px"
+
+  setScroll = (e) ->
+    console.log("resized")
+    $("#resumeContainer").slimScroll
+      height: wHString
+  #return
+ # $(window).resize setScroll
   $(".aboutText").hide()
 
   #$("#menu").scrollToFixed()
@@ -21,7 +31,7 @@ $(document).ready ->
 
 
   $("#resumeContainer").slimScroll
-    height: "500px"
+    height: wHString
 
 
     # width: "40%"
@@ -115,6 +125,14 @@ $(document).ready ->
    
 
     afterResize: ->
+      wHeight = $(window).height()
+      wHString = wHeight + "px"
+      $("#resumeContainer").slimScroll 
+        height: wHString
+
+      console.log("resized")
+      console.log(wHString)
+      #setScroll
     #$("#bgVideo")[0].play()
 
     afterSlideLoad: (anchorLink, index, slideAnchor, slideIndex) ->

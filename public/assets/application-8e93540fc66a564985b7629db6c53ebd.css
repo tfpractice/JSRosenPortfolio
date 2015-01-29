@@ -284,6 +284,12 @@ html, body {
  *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
  * <![endif]--> */
 
+/*! perfect-scrollbar - v0.5.8
+* http://noraesae.github.com/perfect-scrollbar/
+* Copyright (c) 2014 Hyunje Alex Jun; Licensed MIT */
+
+
+.ps-container.ps-active-x>.ps-scrollbar-x-rail,.ps-container.ps-active-y>.ps-scrollbar-y-rail{display:block}.ps-container>.ps-scrollbar-x-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:background-color .2s linear,opacity .2s linear;-moz-transition:background-color .2s linear,opacity .2s linear;-o-transition:background-color .2s linear,opacity .2s linear;transition:background-color .2s linear,opacity .2s linear;bottom:3px;height:8px}.ps-container>.ps-scrollbar-x-rail>.ps-scrollbar-x{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color .2s linear;-moz-transition:background-color .2s linear;-o-transition:background-color .2s linear;transition:background-color .2s linear;bottom:0;height:8px}.ps-container>.ps-scrollbar-x-rail.in-scrolling{background-color:#eee;opacity:.9;-ms-filter:"alpha(Opacity=90)";filter:alpha(opacity=90)}.ps-container>.ps-scrollbar-y-rail{display:none;position:absolute;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;opacity:0;-ms-filter:"alpha(Opacity=0)";filter:alpha(opacity=0);-webkit-transition:background-color .2s linear,opacity .2s linear;-moz-transition:background-color .2s linear,opacity .2s linear;-o-transition:background-color .2s linear,opacity .2s linear;transition:background-color .2s linear,opacity .2s linear;right:3px;width:8px}.ps-container>.ps-scrollbar-y-rail>.ps-scrollbar-y{position:absolute;background-color:#aaa;-webkit-border-radius:4px;-moz-border-radius:4px;-ms-border-radius:4px;border-radius:4px;-webkit-transition:background-color .2s linear;-moz-transition:background-color .2s linear;-o-transition:background-color .2s linear;transition:background-color .2s linear;right:0;width:8px}.ps-container>.ps-scrollbar-y-rail.in-scrolling{background-color:#eee;opacity:.9;-ms-filter:"alpha(Opacity=90)";filter:alpha(opacity=90)}.ps-container:hover>.ps-scrollbar-x-rail,.ps-container:hover>.ps-scrollbar-y-rail{opacity:.6;-ms-filter:"alpha(Opacity=60)";filter:alpha(opacity=60)}.ps-container:hover>.ps-scrollbar-x-rail.in-scrolling,.ps-container:hover>.ps-scrollbar-y-rail.in-scrolling{background-color:#eee;opacity:.9;-ms-filter:"alpha(Opacity=90)";filter:alpha(opacity=90)}.ps-container:hover>.ps-scrollbar-x-rail:hover{background-color:#eee;opacity:.9;-ms-filter:"alpha(Opacity=90)";filter:alpha(opacity=90)}.ps-container:hover>.ps-scrollbar-x-rail:hover>.ps-scrollbar-x{background-color:#999}.ps-container:hover>.ps-scrollbar-y-rail:hover{background-color:#eee;opacity:.9;-ms-filter:"alpha(Opacity=90)";filter:alpha(opacity=90)}.ps-container:hover>.ps-scrollbar-y-rail:hover>.ps-scrollbar-y{background-color:#999}
 /* line 5, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
 #fullpage .section, #fullpage .fp-section, #fullpage .fp-slides, #fullpage .fp-slidesContainer, #fullpage .slide {
   padding: none;
@@ -294,20 +300,16 @@ html, body {
   max-height: 90%;
   max-width: 100%;
 }
-/* line 17, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
-#fullpage .projectDescription p {
-  float: right;
-}
 
-/* line 25, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+/* line 20, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
 body, p, ol, ul, td {
-  font-size: 3em;
-  color: #b8b18c;
+  font-size: 1em;
+  color: #685710;
 }
 
-/* line 32, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
-.projectDescription p {
-  float: right;
+/* line 26, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+h1 {
+  font-size: 1em;
 }
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
@@ -315,20 +317,61 @@ body, p, ol, ul, td {
 
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
-/* line 11, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.section .sectionContainer {
-  float: left;
-  width: 65.28926%;
-  margin-right: 0.82645%;
-  margin-left: 19.83471%;
+/* line 5, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+h1 {
+  font-size: 1.5em;
+  color: #a54222;
+  font-weight: 100;
 }
 
-/* line 18, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 10, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+h2 {
+  font-size: 1em;
+  color: #000000;
+}
+
+/* line 19, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection {
+  background-image: url(/assets/site_bg_1.jpg);
+  background-size: cover,cover;
+  background-repeat: no-repeat;
+}
+/* line 27, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .topHeader {
+  border-bottom: 1px solid #685710;
+  display: block;
+}
+/* line 35, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .aboutText {
+  border-top: 1px solid #685710;
+  border-bottom: 1px solid #685710;
+}
+/* line 40, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .topFooter {
+  text-align: right;
+}
+/* line 42, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .topFooter a {
+  float: right;
+  margin-left: 2em;
+  color: #a54222;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding-top: 0.5em;
+}
+
+/* line 53, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.section .sectionContainer {
+  width: 77.31959%;
+  margin-left: 15.46392%;
+}
+
+/* line 63, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .fp-section.fp-table, .fp-slide.fp-table {
   display: box;
   width: 100%;
 }
-/* line 22, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 67, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .fp-section.fp-table .fp-tableCell, .fp-slide.fp-table .fp-tableCell {
   display: box;
   vertical-align: baseline;
@@ -336,90 +379,133 @@ body, p, ol, ul, td {
   height: 100%;
 }
 
-/* line 36, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 81, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #menu {
   float: left;
-  width: 15.70248%;
-  margin-right: 0.82645%;
+  width: 15.46392%;
+  margin-right: 1.03093%;
+  list-style-type: none;
+}
+/* line 90, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#menu .projectList .menuItem {
+  margin: 1em;
 }
 
-/* line 40, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 96, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #fp-nav {
+  padding-right: 1em;
   position: fixed;
+  list-style-type: none;
   z-index: 100;
-  top: 15%;
-  border-right: 1px solid #b8b18c;
+  top: 7%;
+  border-right: 1px solid #685710;
   padding-left: 1em;
-  vertical-align: baseline;
   opacity: 1;
 }
 
-/* line 51, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectList {
-  display: inline-flex;
-  float: left;
-  margin: 1em;
-  bottom: 0px;
-}
-/* line 57, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectList .menuItem {
-  margin: 1em;
+/* line 110, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.bottom {
+  display: none;
 }
 
-/* line 63, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 113, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-slidesNav.right:nth-of-type(2) {
+  display: none;
+  color: #ff00ff;
+}
+
+/* line 117, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-slidesNav {
+  right: 0px;
+  left: inherit;
+}
+
+/* line 121, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList {
+  list-style: none;
+  float: right;
+  bottom: 0px;
+  margin: 0.5em;
+  text-align: right;
+  max-width: 20em;
+  margin-right: 3.09278%;
+}
+/* line 133, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList .menuItem {
+  margin: 1em;
+  font-size: 1em;
+}
+
+/* line 139, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .menuItem img {
   max-height: 100px;
   margin-top: 2em;
 }
 
-/* line 69, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectDescription {
+/* line 144, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.slimScrollDiv {
+  display: initial;
+}
+/* line 147, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.slimScrollDiv .projectDescription {
   float: left;
-  width: 40.49587%;
-  margin-right: 0.82645%;
+  width: 44.3299%;
+  margin-right: 1.03093%;
   float: right;
-  border-left: 1px solid #b8b18c;
+  border-left: 1px solid #685710;
   padding-left: 1em;
 }
-
-/* line 76, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.imageContainer {
-  float: left;
-  width: 65.28926%;
-  margin-right: 0.82645%;
-}
-
-/* line 82, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectImageContainer img {
-  max-height: 30rem;
-  max-width: 30rem;
-  position: absolute;
-}
-
-/* line 89, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.resumeDiv {
-  float: left;
-  width: 40.49587%;
-  margin-right: 0.82645%;
-}
-/* line 92, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.resumeDiv h1 {
-  font-size: 1.5em;
-}
-/* line 95, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.resumeDiv h2 {
+/* line 150, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.slimScrollDiv .projectDescription p {
   font-size: 1em;
 }
 
-/* line 100, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.flex-control-nav {
-  width: 19.83471%;
-  height: 19.83471%;
-  position: absolute;
-  bottom: 0px;
+/* line 164, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #a54222;
+  float: right;
+  right: 0px;
 }
 
-/* line 110, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 172, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.imageContainer {
+  float: left;
+  width: 48.45361%;
+  margin-right: 1.03093%;
+}
+
+/* line 179, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectImageContainer img {
+  max-height: 19em;
+  max-width: 100%;
+  position: absolute;
+}
+
+/* line 188, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoContainer {
+  max-width: 69.07216%;
+  position: absolute;
+  top: 22em;
+}
+/* line 192, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoContainer video {
+  margin-top: 2.5em;
+  bottom: 1em;
+  max-width: 90%;
+}
+
+/* line 200, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.flex-control-nav {
+  width: 19.58763%;
+  height: 19.58763%;
+  position: absolute;
+  text-align: inherit;
+  margin-top: 1.5em;
+  bottom: 40%;
+  z-index: 5;
+}
+
+/* line 214, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #bgVid {
   position: relative;
   right: 0;
@@ -435,7 +521,7 @@ body, p, ol, ul, td {
   z-index: 0;
 }
 
-/* line 126, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 230, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .videoOverlay {
   position: absolute;
   z-index: 4;
@@ -443,23 +529,131 @@ body, p, ol, ul, td {
   margin: 25%;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 50%;
+  width: 50%;
+}
+
+/* line 241, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer {
+  padding-top: 2em;
+  margin-left: 11.34021%;
+}
+/* line 245, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv {
+  float: left;
+  width: 44.3299%;
+  margin-right: 1.03093%;
+  margin-left: 3.09278%;
+}
+/* line 249, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv .educationList {
+  padding-left: 0px;
+  list-style-type: none;
+}
+/* line 252, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv .educationList li {
+  list-style-type: none;
+}
+/* line 256, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #educationDiv {
+  margin: 0px;
+}
+/* line 259, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #educationDiv text {
+  margin: 0px !important;
+}
+/* line 263, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv h1 {
+  border-bottom: 1px solid #685710;
+  padding-bottom: 0.5em;
+  line-height: 1em;
+  font-size: 1.5em;
+  margin: 0px;
+}
+/* line 271, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv h2 {
+  font-size: 0.9em;
+  margin: 0px;
+}
+/* line 276, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv h3 {
+  font-size: 0.75em;
+  color: #685710;
+  margin: 0px;
+}
+/* line 282, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv p {
+  text-align: justify;
+}
+/* line 289, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #primaryExperienceList, #resumeContainer .resumeDiv #secondaryExperienceList {
+  list-style: none;
+  padding-left: 0px;
+}
+/* line 293, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #skillsDiv {
+  display: flex;
+}
+/* line 296, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #skillsDiv p {
+  line-height: 1em;
 }
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
-/* line 11, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.section .sectionContainer {
-  float: left;
-  width: 65.28926%;
-  margin-right: 0.82645%;
-  margin-left: 19.83471%;
+/* line 5, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+h1 {
+  font-size: 1.5em;
+  color: #a54222;
+  font-weight: 100;
 }
 
-/* line 18, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 10, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+h2 {
+  font-size: 1em;
+  color: #000000;
+}
+
+/* line 19, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection {
+  background-image: url(/assets/site_bg_1.jpg);
+  background-size: cover,cover;
+  background-repeat: no-repeat;
+}
+/* line 27, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .topHeader {
+  border-bottom: 1px solid #685710;
+  display: block;
+}
+/* line 35, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .aboutText {
+  border-top: 1px solid #685710;
+  border-bottom: 1px solid #685710;
+}
+/* line 40, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .topFooter {
+  text-align: right;
+}
+/* line 42, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#topSection .topFooter a {
+  float: right;
+  margin-left: 2em;
+  color: #a54222;
+  font-size: 1.5em;
+  text-decoration: none;
+  padding-top: 0.5em;
+}
+
+/* line 53, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.section .sectionContainer {
+  width: 77.31959%;
+  margin-left: 15.46392%;
+}
+
+/* line 63, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .fp-section.fp-table, .fp-slide.fp-table {
   display: box;
   width: 100%;
 }
-/* line 22, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 67, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .fp-section.fp-table .fp-tableCell, .fp-slide.fp-table .fp-tableCell {
   display: box;
   vertical-align: baseline;
@@ -467,90 +661,133 @@ body, p, ol, ul, td {
   height: 100%;
 }
 
-/* line 36, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 81, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #menu {
   float: left;
-  width: 15.70248%;
-  margin-right: 0.82645%;
+  width: 15.46392%;
+  margin-right: 1.03093%;
+  list-style-type: none;
+}
+/* line 90, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#menu .projectList .menuItem {
+  margin: 1em;
 }
 
-/* line 40, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 96, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #fp-nav {
+  padding-right: 1em;
   position: fixed;
+  list-style-type: none;
   z-index: 100;
-  top: 15%;
-  border-right: 1px solid #b8b18c;
+  top: 7%;
+  border-right: 1px solid #685710;
   padding-left: 1em;
-  vertical-align: baseline;
   opacity: 1;
 }
 
-/* line 51, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectList {
-  display: inline-flex;
-  float: left;
-  margin: 1em;
-  bottom: 0px;
-}
-/* line 57, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectList .menuItem {
-  margin: 1em;
+/* line 110, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.bottom {
+  display: none;
 }
 
-/* line 63, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 113, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-slidesNav.right:nth-of-type(2) {
+  display: none;
+  color: #ff00ff;
+}
+
+/* line 117, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.fp-slidesNav {
+  right: 0px;
+  left: inherit;
+}
+
+/* line 121, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList {
+  list-style: none;
+  float: right;
+  bottom: 0px;
+  margin: 0.5em;
+  text-align: right;
+  max-width: 20em;
+  margin-right: 3.09278%;
+}
+/* line 133, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectList .menuItem {
+  margin: 1em;
+  font-size: 1em;
+}
+
+/* line 139, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .menuItem img {
   max-height: 100px;
   margin-top: 2em;
 }
 
-/* line 69, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectDescription {
+/* line 144, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.slimScrollDiv {
+  display: initial;
+}
+/* line 147, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.slimScrollDiv .projectDescription {
   float: left;
-  width: 40.49587%;
-  margin-right: 0.82645%;
+  width: 44.3299%;
+  margin-right: 1.03093%;
   float: right;
-  border-left: 1px solid #b8b18c;
+  border-left: 1px solid #685710;
   padding-left: 1em;
 }
-
-/* line 76, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.imageContainer {
-  float: left;
-  width: 65.28926%;
-  margin-right: 0.82645%;
-}
-
-/* line 82, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.projectImageContainer img {
-  max-height: 30rem;
-  max-width: 30rem;
-  position: absolute;
-}
-
-/* line 89, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.resumeDiv {
-  float: left;
-  width: 40.49587%;
-  margin-right: 0.82645%;
-}
-/* line 92, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.resumeDiv h1 {
-  font-size: 1.5em;
-}
-/* line 95, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.resumeDiv h2 {
+/* line 150, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.slimScrollDiv .projectDescription p {
   font-size: 1em;
 }
 
-/* line 100, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
-.flex-control-nav {
-  width: 19.83471%;
-  height: 19.83471%;
-  position: absolute;
-  bottom: 0px;
+/* line 164, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y {
+  background-color: #a54222;
+  float: right;
+  right: 0px;
 }
 
-/* line 110, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 172, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.imageContainer {
+  float: left;
+  width: 48.45361%;
+  margin-right: 1.03093%;
+}
+
+/* line 179, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.projectImageContainer img {
+  max-height: 19em;
+  max-width: 100%;
+  position: absolute;
+}
+
+/* line 188, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoContainer {
+  max-width: 69.07216%;
+  position: absolute;
+  top: 22em;
+}
+/* line 192, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoContainer video {
+  margin-top: 2.5em;
+  bottom: 1em;
+  max-width: 90%;
+}
+
+/* line 200, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.flex-control-nav {
+  width: 19.58763%;
+  height: 19.58763%;
+  position: absolute;
+  text-align: inherit;
+  margin-top: 1.5em;
+  bottom: 40%;
+  z-index: 5;
+}
+
+/* line 214, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #bgVid {
   position: relative;
   right: 0;
@@ -566,7 +803,7 @@ body, p, ol, ul, td {
   z-index: 0;
 }
 
-/* line 126, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 230, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 .videoOverlay {
   position: absolute;
   z-index: 4;
@@ -574,7 +811,74 @@ body, p, ol, ul, td {
   margin: 25%;
   left: 0;
   top: 0;
-  height: 100%;
+  height: 50%;
+  width: 50%;
+}
+
+/* line 241, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer {
+  padding-top: 2em;
+  margin-left: 11.34021%;
+}
+/* line 245, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv {
+  float: left;
+  width: 44.3299%;
+  margin-right: 1.03093%;
+  margin-left: 3.09278%;
+}
+/* line 249, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv .educationList {
+  padding-left: 0px;
+  list-style-type: none;
+}
+/* line 252, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv .educationList li {
+  list-style-type: none;
+}
+/* line 256, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #educationDiv {
+  margin: 0px;
+}
+/* line 259, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #educationDiv text {
+  margin: 0px !important;
+}
+/* line 263, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv h1 {
+  border-bottom: 1px solid #685710;
+  padding-bottom: 0.5em;
+  line-height: 1em;
+  font-size: 1.5em;
+  margin: 0px;
+}
+/* line 271, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv h2 {
+  font-size: 0.9em;
+  margin: 0px;
+}
+/* line 276, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv h3 {
+  font-size: 0.75em;
+  color: #685710;
+  margin: 0px;
+}
+/* line 282, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv p {
+  text-align: justify;
+}
+/* line 289, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #primaryExperienceList, #resumeContainer .resumeDiv #secondaryExperienceList {
+  list-style: none;
+  padding-left: 0px;
+}
+/* line 293, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #skillsDiv {
+  display: flex;
+}
+/* line 296, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+#resumeContainer .resumeDiv #skillsDiv p {
+  line-height: 1em;
 }
 /* Welcome to Compass. Use this file to write IE specific override styles.
  * Import this file using the following HTML or equivalent:
@@ -587,21 +891,14 @@ body, p, ol, ul, td {
 @import url("http://fonts.googleapis.com/css?family=Alegreya+Sans+SC:300,400|Source+Sans+Pro:300,400|Lato:300,400,900");
 /* Layout ------------------------------------------------------------------*/
 /* line 7, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/screen.scss */
-.container {
+.slide {
   *zoom: 1;
   margin: auto;
-  width: 121em;
+  width: 97em;
   max-width: 100%;
-  background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwLjgyNjQ1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjAuODI2NDUlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQuMTMyMjMlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQuMTMyMjMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNC45NTg2OCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0Ljk1ODY4JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4LjI2NDQ2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4LjI2NDQ2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkuMDkwOTElIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOS4wOTA5MSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMTIuMzk2NjklIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjEyLjM5NjY5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEzLjIyMzE0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjEzLjIyMzE0JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIxNi41Mjg5MyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMTYuNTI4OTMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTcuMzU1MzclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMTcuMzU1MzclIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjIwLjY2MTE2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIyMC42NjExNiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyMS40ODc2JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjIxLjQ4NzYlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjI0Ljc5MzM5JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIyNC43OTMzOSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyNS42MTk4MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIyNS42MTk4MyUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMjguOTI1NjIlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjI4LjkyNTYyJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjI5Ljc1MjA3JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjI5Ljc1MjA3JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIzMy4wNTc4NSUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMzMuMDU3ODUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMzMuODg0MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIzMy44ODQzJSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSIzNy4xOTAwOCUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iMzcuMTkwMDglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMzguMDE2NTMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iMzguMDE2NTMlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQxLjMyMjMxJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI0MS4zMjIzMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0Mi4xNDg3NiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI0Mi4xNDg3NiUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNDUuNDU0NTUlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjQ1LjQ1NDU1JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQ2LjI4MDk5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQ2LjI4MDk5JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI0OS41ODY3OCUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNDkuNTg2NzglIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNTAuNDEzMjIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNTAuNDEzMjIlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjUzLjcxOTAxJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI1My43MTkwMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1NC41NDU0NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI1NC41NDU0NSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNTcuODUxMjQlIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjU3Ljg1MTI0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjU4LjY3NzY5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjU4LjY3NzY5JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI2MS45ODM0NyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNjEuOTgzNDclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjIuODA5OTIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjIuODA5OTIlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjY2LjExNTclIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjY2LjExNTclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjYuOTQyMTUlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iNjYuOTQyMTUlIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjcwLjI0NzkzJSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3MC4yNDc5MyUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3MS4wNzQzOCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI3MS4wNzQzOCUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iNzQuMzgwMTclIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijc0LjM4MDE3JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1LjIwNjYxJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc1LjIwNjYxJSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3OC41MTI0JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI3OC41MTI0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc5LjMzODg0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9Ijc5LjMzODg0JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4Mi42NDQ2MyUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iODIuNjQ0NjMlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iODMuNDcxMDclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iODMuNDcxMDclIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijg2Ljc3Njg2JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI4Ni43NzY4NiUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI4Ny42MDMzMSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSI4Ny42MDMzMSUiIHN0b3AtY29sb3I9IiM3OTc5ZTUiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iOTAuOTA5MDklIiBzdG9wLWNvbG9yPSIjNGY0ZmRkIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9IjkwLjkwOTA5JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkxLjczNTU0JSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjkxLjczNTU0JSIgc3RvcC1jb2xvcj0iIzc5NzllNSIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5NS4wNDEzMiUiIHN0b3AtY29sb3I9IiM0ZjRmZGQiIHN0b3Atb3BhY2l0eT0iMC4yNSIvPjxzdG9wIG9mZnNldD0iOTUuMDQxMzIlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOTUuODY3NzclIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjxzdG9wIG9mZnNldD0iOTUuODY3NzclIiBzdG9wLWNvbG9yPSIjNzk3OWU1IiBzdG9wLW9wYWNpdHk9IjAuMjUiLz48c3RvcCBvZmZzZXQ9Ijk5LjE3MzU1JSIgc3RvcC1jb2xvcj0iIzRmNGZkZCIgc3RvcC1vcGFjaXR5PSIwLjI1Ii8+PHN0b3Agb2Zmc2V0PSI5OS4xNzM1NSUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
-  background-size: 100%;
-  background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0.82645%, rgba(0, 0, 0, 0)), color-stop(0.82645%, rgba(121, 121, 229, 0.25)), color-stop(4.13223%, rgba(79, 79, 221, 0.25)), color-stop(4.13223%, rgba(0, 0, 0, 0)), color-stop(4.95868%, rgba(0, 0, 0, 0)), color-stop(4.95868%, rgba(121, 121, 229, 0.25)), color-stop(8.26446%, rgba(79, 79, 221, 0.25)), color-stop(8.26446%, rgba(0, 0, 0, 0)), color-stop(9.09091%, rgba(0, 0, 0, 0)), color-stop(9.09091%, rgba(121, 121, 229, 0.25)), color-stop(12.39669%, rgba(79, 79, 221, 0.25)), color-stop(12.39669%, rgba(0, 0, 0, 0)), color-stop(13.22314%, rgba(0, 0, 0, 0)), color-stop(13.22314%, rgba(121, 121, 229, 0.25)), color-stop(16.52893%, rgba(79, 79, 221, 0.25)), color-stop(16.52893%, rgba(0, 0, 0, 0)), color-stop(17.35537%, rgba(0, 0, 0, 0)), color-stop(17.35537%, rgba(121, 121, 229, 0.25)), color-stop(20.66116%, rgba(79, 79, 221, 0.25)), color-stop(20.66116%, rgba(0, 0, 0, 0)), color-stop(21.4876%, rgba(0, 0, 0, 0)), color-stop(21.4876%, rgba(121, 121, 229, 0.25)), color-stop(24.79339%, rgba(79, 79, 221, 0.25)), color-stop(24.79339%, rgba(0, 0, 0, 0)), color-stop(25.61983%, rgba(0, 0, 0, 0)), color-stop(25.61983%, rgba(121, 121, 229, 0.25)), color-stop(28.92562%, rgba(79, 79, 221, 0.25)), color-stop(28.92562%, rgba(0, 0, 0, 0)), color-stop(29.75207%, rgba(0, 0, 0, 0)), color-stop(29.75207%, rgba(121, 121, 229, 0.25)), color-stop(33.05785%, rgba(79, 79, 221, 0.25)), color-stop(33.05785%, rgba(0, 0, 0, 0)), color-stop(33.8843%, rgba(0, 0, 0, 0)), color-stop(33.8843%, rgba(121, 121, 229, 0.25)), color-stop(37.19008%, rgba(79, 79, 221, 0.25)), color-stop(37.19008%, rgba(0, 0, 0, 0)), color-stop(38.01653%, rgba(0, 0, 0, 0)), color-stop(38.01653%, rgba(121, 121, 229, 0.25)), color-stop(41.32231%, rgba(79, 79, 221, 0.25)), color-stop(41.32231%, rgba(0, 0, 0, 0)), color-stop(42.14876%, rgba(0, 0, 0, 0)), color-stop(42.14876%, rgba(121, 121, 229, 0.25)), color-stop(45.45455%, rgba(79, 79, 221, 0.25)), color-stop(45.45455%, rgba(0, 0, 0, 0)), color-stop(46.28099%, rgba(0, 0, 0, 0)), color-stop(46.28099%, rgba(121, 121, 229, 0.25)), color-stop(49.58678%, rgba(79, 79, 221, 0.25)), color-stop(49.58678%, rgba(0, 0, 0, 0)), color-stop(50.41322%, rgba(0, 0, 0, 0)), color-stop(50.41322%, rgba(121, 121, 229, 0.25)), color-stop(53.71901%, rgba(79, 79, 221, 0.25)), color-stop(53.71901%, rgba(0, 0, 0, 0)), color-stop(54.54545%, rgba(0, 0, 0, 0)), color-stop(54.54545%, rgba(121, 121, 229, 0.25)), color-stop(57.85124%, rgba(79, 79, 221, 0.25)), color-stop(57.85124%, rgba(0, 0, 0, 0)), color-stop(58.67769%, rgba(0, 0, 0, 0)), color-stop(58.67769%, rgba(121, 121, 229, 0.25)), color-stop(61.98347%, rgba(79, 79, 221, 0.25)), color-stop(61.98347%, rgba(0, 0, 0, 0)), color-stop(62.80992%, rgba(0, 0, 0, 0)), color-stop(62.80992%, rgba(121, 121, 229, 0.25)), color-stop(66.1157%, rgba(79, 79, 221, 0.25)), color-stop(66.1157%, rgba(0, 0, 0, 0)), color-stop(66.94215%, rgba(0, 0, 0, 0)), color-stop(66.94215%, rgba(121, 121, 229, 0.25)), color-stop(70.24793%, rgba(79, 79, 221, 0.25)), color-stop(70.24793%, rgba(0, 0, 0, 0)), color-stop(71.07438%, rgba(0, 0, 0, 0)), color-stop(71.07438%, rgba(121, 121, 229, 0.25)), color-stop(74.38017%, rgba(79, 79, 221, 0.25)), color-stop(74.38017%, rgba(0, 0, 0, 0)), color-stop(75.20661%, rgba(0, 0, 0, 0)), color-stop(75.20661%, rgba(121, 121, 229, 0.25)), color-stop(78.5124%, rgba(79, 79, 221, 0.25)), color-stop(78.5124%, rgba(0, 0, 0, 0)), color-stop(79.33884%, rgba(0, 0, 0, 0)), color-stop(79.33884%, rgba(121, 121, 229, 0.25)), color-stop(82.64463%, rgba(79, 79, 221, 0.25)), color-stop(82.64463%, rgba(0, 0, 0, 0)), color-stop(83.47107%, rgba(0, 0, 0, 0)), color-stop(83.47107%, rgba(121, 121, 229, 0.25)), color-stop(86.77686%, rgba(79, 79, 221, 0.25)), color-stop(86.77686%, rgba(0, 0, 0, 0)), color-stop(87.60331%, rgba(0, 0, 0, 0)), color-stop(87.60331%, rgba(121, 121, 229, 0.25)), color-stop(90.90909%, rgba(79, 79, 221, 0.25)), color-stop(90.90909%, rgba(0, 0, 0, 0)), color-stop(91.73554%, rgba(0, 0, 0, 0)), color-stop(91.73554%, rgba(121, 121, 229, 0.25)), color-stop(95.04132%, rgba(79, 79, 221, 0.25)), color-stop(95.04132%, rgba(0, 0, 0, 0)), color-stop(95.86777%, rgba(0, 0, 0, 0)), color-stop(95.86777%, rgba(121, 121, 229, 0.25)), color-stop(99.17355%, rgba(79, 79, 221, 0.25)), color-stop(99.17355%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0)));
-  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0.82645%, rgba(121, 121, 229, 0.25) 0.82645%, rgba(79, 79, 221, 0.25) 4.13223%, rgba(0, 0, 0, 0) 4.13223%, rgba(0, 0, 0, 0) 4.95868%, rgba(121, 121, 229, 0.25) 4.95868%, rgba(79, 79, 221, 0.25) 8.26446%, rgba(0, 0, 0, 0) 8.26446%, rgba(0, 0, 0, 0) 9.09091%, rgba(121, 121, 229, 0.25) 9.09091%, rgba(79, 79, 221, 0.25) 12.39669%, rgba(0, 0, 0, 0) 12.39669%, rgba(0, 0, 0, 0) 13.22314%, rgba(121, 121, 229, 0.25) 13.22314%, rgba(79, 79, 221, 0.25) 16.52893%, rgba(0, 0, 0, 0) 16.52893%, rgba(0, 0, 0, 0) 17.35537%, rgba(121, 121, 229, 0.25) 17.35537%, rgba(79, 79, 221, 0.25) 20.66116%, rgba(0, 0, 0, 0) 20.66116%, rgba(0, 0, 0, 0) 21.4876%, rgba(121, 121, 229, 0.25) 21.4876%, rgba(79, 79, 221, 0.25) 24.79339%, rgba(0, 0, 0, 0) 24.79339%, rgba(0, 0, 0, 0) 25.61983%, rgba(121, 121, 229, 0.25) 25.61983%, rgba(79, 79, 221, 0.25) 28.92562%, rgba(0, 0, 0, 0) 28.92562%, rgba(0, 0, 0, 0) 29.75207%, rgba(121, 121, 229, 0.25) 29.75207%, rgba(79, 79, 221, 0.25) 33.05785%, rgba(0, 0, 0, 0) 33.05785%, rgba(0, 0, 0, 0) 33.8843%, rgba(121, 121, 229, 0.25) 33.8843%, rgba(79, 79, 221, 0.25) 37.19008%, rgba(0, 0, 0, 0) 37.19008%, rgba(0, 0, 0, 0) 38.01653%, rgba(121, 121, 229, 0.25) 38.01653%, rgba(79, 79, 221, 0.25) 41.32231%, rgba(0, 0, 0, 0) 41.32231%, rgba(0, 0, 0, 0) 42.14876%, rgba(121, 121, 229, 0.25) 42.14876%, rgba(79, 79, 221, 0.25) 45.45455%, rgba(0, 0, 0, 0) 45.45455%, rgba(0, 0, 0, 0) 46.28099%, rgba(121, 121, 229, 0.25) 46.28099%, rgba(79, 79, 221, 0.25) 49.58678%, rgba(0, 0, 0, 0) 49.58678%, rgba(0, 0, 0, 0) 50.41322%, rgba(121, 121, 229, 0.25) 50.41322%, rgba(79, 79, 221, 0.25) 53.71901%, rgba(0, 0, 0, 0) 53.71901%, rgba(0, 0, 0, 0) 54.54545%, rgba(121, 121, 229, 0.25) 54.54545%, rgba(79, 79, 221, 0.25) 57.85124%, rgba(0, 0, 0, 0) 57.85124%, rgba(0, 0, 0, 0) 58.67769%, rgba(121, 121, 229, 0.25) 58.67769%, rgba(79, 79, 221, 0.25) 61.98347%, rgba(0, 0, 0, 0) 61.98347%, rgba(0, 0, 0, 0) 62.80992%, rgba(121, 121, 229, 0.25) 62.80992%, rgba(79, 79, 221, 0.25) 66.1157%, rgba(0, 0, 0, 0) 66.1157%, rgba(0, 0, 0, 0) 66.94215%, rgba(121, 121, 229, 0.25) 66.94215%, rgba(79, 79, 221, 0.25) 70.24793%, rgba(0, 0, 0, 0) 70.24793%, rgba(0, 0, 0, 0) 71.07438%, rgba(121, 121, 229, 0.25) 71.07438%, rgba(79, 79, 221, 0.25) 74.38017%, rgba(0, 0, 0, 0) 74.38017%, rgba(0, 0, 0, 0) 75.20661%, rgba(121, 121, 229, 0.25) 75.20661%, rgba(79, 79, 221, 0.25) 78.5124%, rgba(0, 0, 0, 0) 78.5124%, rgba(0, 0, 0, 0) 79.33884%, rgba(121, 121, 229, 0.25) 79.33884%, rgba(79, 79, 221, 0.25) 82.64463%, rgba(0, 0, 0, 0) 82.64463%, rgba(0, 0, 0, 0) 83.47107%, rgba(121, 121, 229, 0.25) 83.47107%, rgba(79, 79, 221, 0.25) 86.77686%, rgba(0, 0, 0, 0) 86.77686%, rgba(0, 0, 0, 0) 87.60331%, rgba(121, 121, 229, 0.25) 87.60331%, rgba(79, 79, 221, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%, rgba(0, 0, 0, 0) 91.73554%, rgba(121, 121, 229, 0.25) 91.73554%, rgba(79, 79, 221, 0.25) 95.04132%, rgba(0, 0, 0, 0) 95.04132%, rgba(0, 0, 0, 0) 95.86777%, rgba(121, 121, 229, 0.25) 95.86777%, rgba(79, 79, 221, 0.25) 99.17355%, rgba(0, 0, 0, 0) 99.17355%, rgba(0, 0, 0, 0) 100%);
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0.82645%, rgba(121, 121, 229, 0.25) 0.82645%, rgba(79, 79, 221, 0.25) 4.13223%, rgba(0, 0, 0, 0) 4.13223%, rgba(0, 0, 0, 0) 4.95868%, rgba(121, 121, 229, 0.25) 4.95868%, rgba(79, 79, 221, 0.25) 8.26446%, rgba(0, 0, 0, 0) 8.26446%, rgba(0, 0, 0, 0) 9.09091%, rgba(121, 121, 229, 0.25) 9.09091%, rgba(79, 79, 221, 0.25) 12.39669%, rgba(0, 0, 0, 0) 12.39669%, rgba(0, 0, 0, 0) 13.22314%, rgba(121, 121, 229, 0.25) 13.22314%, rgba(79, 79, 221, 0.25) 16.52893%, rgba(0, 0, 0, 0) 16.52893%, rgba(0, 0, 0, 0) 17.35537%, rgba(121, 121, 229, 0.25) 17.35537%, rgba(79, 79, 221, 0.25) 20.66116%, rgba(0, 0, 0, 0) 20.66116%, rgba(0, 0, 0, 0) 21.4876%, rgba(121, 121, 229, 0.25) 21.4876%, rgba(79, 79, 221, 0.25) 24.79339%, rgba(0, 0, 0, 0) 24.79339%, rgba(0, 0, 0, 0) 25.61983%, rgba(121, 121, 229, 0.25) 25.61983%, rgba(79, 79, 221, 0.25) 28.92562%, rgba(0, 0, 0, 0) 28.92562%, rgba(0, 0, 0, 0) 29.75207%, rgba(121, 121, 229, 0.25) 29.75207%, rgba(79, 79, 221, 0.25) 33.05785%, rgba(0, 0, 0, 0) 33.05785%, rgba(0, 0, 0, 0) 33.8843%, rgba(121, 121, 229, 0.25) 33.8843%, rgba(79, 79, 221, 0.25) 37.19008%, rgba(0, 0, 0, 0) 37.19008%, rgba(0, 0, 0, 0) 38.01653%, rgba(121, 121, 229, 0.25) 38.01653%, rgba(79, 79, 221, 0.25) 41.32231%, rgba(0, 0, 0, 0) 41.32231%, rgba(0, 0, 0, 0) 42.14876%, rgba(121, 121, 229, 0.25) 42.14876%, rgba(79, 79, 221, 0.25) 45.45455%, rgba(0, 0, 0, 0) 45.45455%, rgba(0, 0, 0, 0) 46.28099%, rgba(121, 121, 229, 0.25) 46.28099%, rgba(79, 79, 221, 0.25) 49.58678%, rgba(0, 0, 0, 0) 49.58678%, rgba(0, 0, 0, 0) 50.41322%, rgba(121, 121, 229, 0.25) 50.41322%, rgba(79, 79, 221, 0.25) 53.71901%, rgba(0, 0, 0, 0) 53.71901%, rgba(0, 0, 0, 0) 54.54545%, rgba(121, 121, 229, 0.25) 54.54545%, rgba(79, 79, 221, 0.25) 57.85124%, rgba(0, 0, 0, 0) 57.85124%, rgba(0, 0, 0, 0) 58.67769%, rgba(121, 121, 229, 0.25) 58.67769%, rgba(79, 79, 221, 0.25) 61.98347%, rgba(0, 0, 0, 0) 61.98347%, rgba(0, 0, 0, 0) 62.80992%, rgba(121, 121, 229, 0.25) 62.80992%, rgba(79, 79, 221, 0.25) 66.1157%, rgba(0, 0, 0, 0) 66.1157%, rgba(0, 0, 0, 0) 66.94215%, rgba(121, 121, 229, 0.25) 66.94215%, rgba(79, 79, 221, 0.25) 70.24793%, rgba(0, 0, 0, 0) 70.24793%, rgba(0, 0, 0, 0) 71.07438%, rgba(121, 121, 229, 0.25) 71.07438%, rgba(79, 79, 221, 0.25) 74.38017%, rgba(0, 0, 0, 0) 74.38017%, rgba(0, 0, 0, 0) 75.20661%, rgba(121, 121, 229, 0.25) 75.20661%, rgba(79, 79, 221, 0.25) 78.5124%, rgba(0, 0, 0, 0) 78.5124%, rgba(0, 0, 0, 0) 79.33884%, rgba(121, 121, 229, 0.25) 79.33884%, rgba(79, 79, 221, 0.25) 82.64463%, rgba(0, 0, 0, 0) 82.64463%, rgba(0, 0, 0, 0) 83.47107%, rgba(121, 121, 229, 0.25) 83.47107%, rgba(79, 79, 221, 0.25) 86.77686%, rgba(0, 0, 0, 0) 86.77686%, rgba(0, 0, 0, 0) 87.60331%, rgba(121, 121, 229, 0.25) 87.60331%, rgba(79, 79, 221, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%, rgba(0, 0, 0, 0) 91.73554%, rgba(121, 121, 229, 0.25) 91.73554%, rgba(79, 79, 221, 0.25) 95.04132%, rgba(0, 0, 0, 0) 95.04132%, rgba(0, 0, 0, 0) 95.86777%, rgba(121, 121, 229, 0.25) 95.86777%, rgba(79, 79, 221, 0.25) 99.17355%, rgba(0, 0, 0, 0) 99.17355%, rgba(0, 0, 0, 0) 100%);
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0.82645%, rgba(121, 121, 229, 0.25) 0.82645%, rgba(79, 79, 221, 0.25) 4.13223%, rgba(0, 0, 0, 0) 4.13223%, rgba(0, 0, 0, 0) 4.95868%, rgba(121, 121, 229, 0.25) 4.95868%, rgba(79, 79, 221, 0.25) 8.26446%, rgba(0, 0, 0, 0) 8.26446%, rgba(0, 0, 0, 0) 9.09091%, rgba(121, 121, 229, 0.25) 9.09091%, rgba(79, 79, 221, 0.25) 12.39669%, rgba(0, 0, 0, 0) 12.39669%, rgba(0, 0, 0, 0) 13.22314%, rgba(121, 121, 229, 0.25) 13.22314%, rgba(79, 79, 221, 0.25) 16.52893%, rgba(0, 0, 0, 0) 16.52893%, rgba(0, 0, 0, 0) 17.35537%, rgba(121, 121, 229, 0.25) 17.35537%, rgba(79, 79, 221, 0.25) 20.66116%, rgba(0, 0, 0, 0) 20.66116%, rgba(0, 0, 0, 0) 21.4876%, rgba(121, 121, 229, 0.25) 21.4876%, rgba(79, 79, 221, 0.25) 24.79339%, rgba(0, 0, 0, 0) 24.79339%, rgba(0, 0, 0, 0) 25.61983%, rgba(121, 121, 229, 0.25) 25.61983%, rgba(79, 79, 221, 0.25) 28.92562%, rgba(0, 0, 0, 0) 28.92562%, rgba(0, 0, 0, 0) 29.75207%, rgba(121, 121, 229, 0.25) 29.75207%, rgba(79, 79, 221, 0.25) 33.05785%, rgba(0, 0, 0, 0) 33.05785%, rgba(0, 0, 0, 0) 33.8843%, rgba(121, 121, 229, 0.25) 33.8843%, rgba(79, 79, 221, 0.25) 37.19008%, rgba(0, 0, 0, 0) 37.19008%, rgba(0, 0, 0, 0) 38.01653%, rgba(121, 121, 229, 0.25) 38.01653%, rgba(79, 79, 221, 0.25) 41.32231%, rgba(0, 0, 0, 0) 41.32231%, rgba(0, 0, 0, 0) 42.14876%, rgba(121, 121, 229, 0.25) 42.14876%, rgba(79, 79, 221, 0.25) 45.45455%, rgba(0, 0, 0, 0) 45.45455%, rgba(0, 0, 0, 0) 46.28099%, rgba(121, 121, 229, 0.25) 46.28099%, rgba(79, 79, 221, 0.25) 49.58678%, rgba(0, 0, 0, 0) 49.58678%, rgba(0, 0, 0, 0) 50.41322%, rgba(121, 121, 229, 0.25) 50.41322%, rgba(79, 79, 221, 0.25) 53.71901%, rgba(0, 0, 0, 0) 53.71901%, rgba(0, 0, 0, 0) 54.54545%, rgba(121, 121, 229, 0.25) 54.54545%, rgba(79, 79, 221, 0.25) 57.85124%, rgba(0, 0, 0, 0) 57.85124%, rgba(0, 0, 0, 0) 58.67769%, rgba(121, 121, 229, 0.25) 58.67769%, rgba(79, 79, 221, 0.25) 61.98347%, rgba(0, 0, 0, 0) 61.98347%, rgba(0, 0, 0, 0) 62.80992%, rgba(121, 121, 229, 0.25) 62.80992%, rgba(79, 79, 221, 0.25) 66.1157%, rgba(0, 0, 0, 0) 66.1157%, rgba(0, 0, 0, 0) 66.94215%, rgba(121, 121, 229, 0.25) 66.94215%, rgba(79, 79, 221, 0.25) 70.24793%, rgba(0, 0, 0, 0) 70.24793%, rgba(0, 0, 0, 0) 71.07438%, rgba(121, 121, 229, 0.25) 71.07438%, rgba(79, 79, 221, 0.25) 74.38017%, rgba(0, 0, 0, 0) 74.38017%, rgba(0, 0, 0, 0) 75.20661%, rgba(121, 121, 229, 0.25) 75.20661%, rgba(79, 79, 221, 0.25) 78.5124%, rgba(0, 0, 0, 0) 78.5124%, rgba(0, 0, 0, 0) 79.33884%, rgba(121, 121, 229, 0.25) 79.33884%, rgba(79, 79, 221, 0.25) 82.64463%, rgba(0, 0, 0, 0) 82.64463%, rgba(0, 0, 0, 0) 83.47107%, rgba(121, 121, 229, 0.25) 83.47107%, rgba(79, 79, 221, 0.25) 86.77686%, rgba(0, 0, 0, 0) 86.77686%, rgba(0, 0, 0, 0) 87.60331%, rgba(121, 121, 229, 0.25) 87.60331%, rgba(79, 79, 221, 0.25) 90.90909%, rgba(0, 0, 0, 0) 90.90909%, rgba(0, 0, 0, 0) 91.73554%, rgba(121, 121, 229, 0.25) 91.73554%, rgba(79, 79, 221, 0.25) 95.04132%, rgba(0, 0, 0, 0) 95.04132%, rgba(0, 0, 0, 0) 95.86777%, rgba(121, 121, 229, 0.25) 95.86777%, rgba(79, 79, 221, 0.25) 99.17355%, rgba(0, 0, 0, 0) 99.17355%, rgba(0, 0, 0, 0) 100%);
-  background-position: left top;
 }
 /* line 38, /Users/tfpractice/.rbenv/versions/2.1.5/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/utilities/general/_clearfix.scss */
-.container:after {
+.slide:after {
   content: "";
   display: table;
   clear: both;
@@ -617,9 +914,8 @@ body {
 
 /* line 9, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
 p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-family: 'Source Sans Pro', verdana, arial, helvetica, sans-serif;
+  font-size: 1em;
 }
 
 /* line 15, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
@@ -631,16 +927,16 @@ pre {
 
 /* line 21, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
 a {
-  color: #000;
+  color: none;
 }
 /* line 23, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
 a:visited {
-  color: #666;
+  color: #685710;
 }
 /* line 26, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
 a:hover {
-  color: #fff;
-  background-color: #000;
+  color: #a54222;
+  background-color: none;
 }
 
 /* line 33, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
