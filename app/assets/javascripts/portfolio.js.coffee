@@ -2,11 +2,12 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).ready ->
+  
 
   wHeight = $(window).height()
-  wHString = wHeight + "px"
+  wHString = (wHeight *.9) + "px"
 
-  setScroll = (e) ->
+  setScroll = ->
     console.log("resized")
     $("#resumeContainer").slimScroll
       height: wHString
@@ -125,6 +126,7 @@ $(document).ready ->
    
 
     afterResize: ->
+
       wHeight = $(window).height()
       wHString = wHeight + "px"
       $("#resumeContainer").slimScroll 
@@ -138,6 +140,9 @@ $(document).ready ->
     afterSlideLoad: (anchorLink, index, slideAnchor, slideIndex) ->
 
     onSlideLeave: (anchorLink, index, slideIndex, direction) ->
+
+
+
 
   #$("#bgVid").load 
  # $("#bgVid").autoplay = true  
