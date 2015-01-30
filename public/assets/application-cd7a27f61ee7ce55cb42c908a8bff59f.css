@@ -304,12 +304,19 @@ html, body {
 /* line 20, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
 body, p, ol, ul, td {
   font-size: 1em;
-  color: #b8b18c;
+  color: #685710;
 }
 
 /* line 26, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
 h1 {
   font-size: 1em;
+}
+
+/* line 30, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/portfolio.css.scss */
+#topSection {
+  background-image: url("site_bg_1.jpg");
+  background-size: cover,cover;
+  background-repeat: no-repeat;
 }
 /* Welcome to Compass. Use this file to define print styles.
  * Import this file using the following HTML or equivalent:
@@ -332,19 +339,18 @@ h2 {
 
 /* line 19, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection {
-  background-image: url(/assets/site_bg_1.jpg);
   background-size: cover,cover;
   background-repeat: no-repeat;
 }
 /* line 27, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection .topHeader {
-  border-bottom: 1px solid #b8b18c;
+  border-bottom: 1px solid #685710;
   display: block;
 }
 /* line 35, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection .aboutText {
-  border-top: 1px solid #b8b18c;
-  border-bottom: 1px solid #b8b18c;
+  border-top: 1px solid #685710;
+  border-bottom: 1px solid #685710;
 }
 /* line 40, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection .topFooter {
@@ -398,7 +404,7 @@ h2 {
   list-style-type: none;
   z-index: 100;
   top: 7%;
-  border-right: 1px solid #b8b18c;
+  border-right: 1px solid #685710;
   padding-left: 1em;
   opacity: 1;
 }
@@ -452,7 +458,7 @@ h2 {
   width: 44.3299%;
   margin-right: 1.03093%;
   float: right;
-  border-left: 1px solid #b8b18c;
+  border-left: 1px solid #685710;
   padding-left: 1em;
 }
 /* line 150, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
@@ -532,69 +538,79 @@ h2 {
   height: 50%;
   width: 50%;
 }
+/* line 240, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoOverlay h1, .videoOverlay a {
+  color: #f54222 !important;
+}
+/* line 243, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoOverlay p {
+  color: #ffffea;
+}
 
-/* line 241, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 248, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer {
   padding-top: 2em;
   margin-left: 11.34021%;
+  border-bottom: 1px solid #a54222;
+  padding-bottom: 10px;
 }
-/* line 245, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 254, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv {
   float: left;
   width: 44.3299%;
   margin-right: 1.03093%;
   margin-left: 3.09278%;
 }
-/* line 249, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 258, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv .educationList {
   padding-left: 0px;
   list-style-type: none;
 }
-/* line 252, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 261, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv .educationList li {
   list-style-type: none;
 }
-/* line 256, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 265, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #educationDiv {
   margin: 0px;
 }
-/* line 259, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 268, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #educationDiv text {
   margin: 0px !important;
 }
-/* line 263, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 272, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv h1 {
-  border-bottom: 1px solid #b8b18c;
+  border-bottom: 1px solid #685710;
   padding-bottom: 0.5em;
   line-height: 1em;
   font-size: 1.5em;
   margin: 0px;
 }
-/* line 271, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 280, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv h2 {
   font-size: 0.9em;
   margin: 0px;
 }
-/* line 276, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 285, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv h3 {
   font-size: 0.75em;
-  color: #b8b18c;
+  color: #685710;
   margin: 0px;
 }
-/* line 282, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 291, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv p {
   text-align: justify;
 }
-/* line 289, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 298, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #primaryExperienceList, #resumeContainer .resumeDiv #secondaryExperienceList {
   list-style: none;
   padding-left: 0px;
 }
-/* line 293, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 302, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #skillsDiv {
   display: flex;
 }
-/* line 296, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 305, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #skillsDiv p {
   line-height: 1em;
 }
@@ -614,19 +630,18 @@ h2 {
 
 /* line 19, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection {
-  background-image: url(/assets/site_bg_1.jpg);
   background-size: cover,cover;
   background-repeat: no-repeat;
 }
 /* line 27, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection .topHeader {
-  border-bottom: 1px solid #b8b18c;
+  border-bottom: 1px solid #685710;
   display: block;
 }
 /* line 35, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection .aboutText {
-  border-top: 1px solid #b8b18c;
-  border-bottom: 1px solid #b8b18c;
+  border-top: 1px solid #685710;
+  border-bottom: 1px solid #685710;
 }
 /* line 40, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #topSection .topFooter {
@@ -680,7 +695,7 @@ h2 {
   list-style-type: none;
   z-index: 100;
   top: 7%;
-  border-right: 1px solid #b8b18c;
+  border-right: 1px solid #685710;
   padding-left: 1em;
   opacity: 1;
 }
@@ -734,7 +749,7 @@ h2 {
   width: 44.3299%;
   margin-right: 1.03093%;
   float: right;
-  border-left: 1px solid #b8b18c;
+  border-left: 1px solid #685710;
   padding-left: 1em;
 }
 /* line 150, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
@@ -814,69 +829,79 @@ h2 {
   height: 50%;
   width: 50%;
 }
+/* line 240, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoOverlay h1, .videoOverlay a {
+  color: #f54222 !important;
+}
+/* line 243, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+.videoOverlay p {
+  color: #ffffea;
+}
 
-/* line 241, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 248, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer {
   padding-top: 2em;
   margin-left: 11.34021%;
+  border-bottom: 1px solid #a54222;
+  padding-bottom: 10px;
 }
-/* line 245, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 254, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv {
   float: left;
   width: 44.3299%;
   margin-right: 1.03093%;
   margin-left: 3.09278%;
 }
-/* line 249, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 258, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv .educationList {
   padding-left: 0px;
   list-style-type: none;
 }
-/* line 252, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 261, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv .educationList li {
   list-style-type: none;
 }
-/* line 256, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 265, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #educationDiv {
   margin: 0px;
 }
-/* line 259, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 268, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #educationDiv text {
   margin: 0px !important;
 }
-/* line 263, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 272, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv h1 {
-  border-bottom: 1px solid #b8b18c;
+  border-bottom: 1px solid #685710;
   padding-bottom: 0.5em;
   line-height: 1em;
   font-size: 1.5em;
   margin: 0px;
 }
-/* line 271, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 280, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv h2 {
   font-size: 0.9em;
   margin: 0px;
 }
-/* line 276, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 285, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv h3 {
   font-size: 0.75em;
-  color: #b8b18c;
+  color: #685710;
   margin: 0px;
 }
-/* line 282, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 291, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv p {
   text-align: justify;
 }
-/* line 289, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 298, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #primaryExperienceList, #resumeContainer .resumeDiv #secondaryExperienceList {
   list-style: none;
   padding-left: 0px;
 }
-/* line 293, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 302, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #skillsDiv {
   display: flex;
 }
-/* line 296, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
+/* line 305, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/sass/_modules.scss */
 #resumeContainer .resumeDiv #skillsDiv p {
   line-height: 1em;
 }
@@ -931,7 +956,7 @@ a {
 }
 /* line 23, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
 a:visited {
-  color: #b8b18c;
+  color: #685710;
 }
 /* line 26, /Users/tfpractice/Sites/JSRosen01/app/assets/stylesheets/scaffolds.css.scss */
 a:hover {

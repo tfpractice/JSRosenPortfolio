@@ -248,6 +248,8 @@ width: 50%;
 #resumeContainer{
 	padding-top: 2em;
 	margin-left: columns(3);
+	border-bottom: 1px solid #a54222;
+	padding-bottom: 10px;
 
 .resumeDiv{
 	@include columns(11);
